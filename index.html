@@ -15,7 +15,7 @@
                 <span class="text-blue-500">MRA</span> <span class="text-white">vanguard</span>
             </h1>
             <div class="hidden md:flex space-x-6 text-xs font-bold tracking-widest uppercase items-center">
-                <a href="#módulos" class="hover:text-blue-400 transition">Herramientas</a>
+                <a href="#módulos" class="hover:text-blue-400 transition text-[10px]">Herramientas</a>
                 <a href="#contacto" class="px-4 py-2 border border-blue-500 text-blue-500 rounded hover:bg-blue-500 hover:text-white transition text-[10px]">CONTACTO</a>
             </div>
         </div>
@@ -28,19 +28,19 @@
             
             <div class="p-8 bg-slate-900 rounded-2xl border border-slate-800">
                 <h4 class="text-blue-500 font-bold uppercase mb-4 text-sm"><i class="fas fa-search-nodes mr-2"></i> Análisis Lineal de URL</h4>
-                <p class="text-xs text-slate-500 mb-6">Ingresa una URL para validar su estructura y parámetros de seguridad.</p>
-                <input id="urlInput" type="text" placeholder="https://ejemplo.com" class="w-full bg-slate-800 border border-slate-700 p-3 rounded-lg text-sm mb-4 outline-none focus:border-blue-500">
-                <button onclick="analizarUrl()" class="w-full bg-blue-600 p-3 rounded-lg font-bold text-xs uppercase hover:bg-blue-700 transition">Ejecutar Escaneo</button>
+                <p class="text-xs text-slate-500 mb-6">Valida la estructura y protocolos de seguridad de cualquier dominio.</p>
+                <input id="urlInput" type="text" placeholder="https://ejemplo.com" class="w-full bg-slate-800 border border-slate-700 p-3 rounded-lg text-sm mb-4 outline-none focus:border-blue-500 text-white">
+                <button onclick="analizarUrl()" class="w-full bg-blue-600 p-3 rounded-lg font-bold text-xs uppercase hover:bg-blue-700 transition">Ejecutar Protocolo</button>
                 <div id="resultadoUrl" class="mt-4 p-3 bg-black/50 rounded-lg text-[11px] font-mono text-green-400 hidden"></div>
             </div>
 
             <div class="p-8 bg-slate-900 rounded-2xl border border-slate-800">
                 <h4 class="text-blue-500 font-bold uppercase mb-4 text-sm"><i class="fas fa-bug text-sm mr-2"></i> Diagnóstico Express QA/Security</h4>
-                <p class="text-xs text-slate-500 mb-6">Analiza vulnerabilidades comunes y estado de calidad del sitio.</p>
+                <p class="text-xs text-slate-500 mb-6">Simulación de procesos Sentinel QA y Legacy Bridge.</p>
                 <div class="space-y-3">
                     <button onclick="testQA('SSL')" class="w-full text-left p-3 border border-slate-800 rounded-lg text-xs hover:bg-slate-800 transition">1. Verificar Certificado SSL/TLS</button>
-                    <button onclick="testQA('QA')" class="w-full text-left p-3 border border-slate-800 rounded-lg text-xs hover:bg-slate-800 transition">2. Simular Prueba de Regresión (Selenium)</button>
-                    <button onclick="testQA('VUL')" class="w-full text-left p-3 border border-slate-800 rounded-lg text-xs hover:bg-slate-800 transition">3. Escaneo de Inyección SQL Express</button>
+                    <button onclick="testQA('QA')" class="w-full text-left p-3 border border-slate-800 rounded-lg text-xs hover:bg-slate-800 transition">2. Ejecutar Sentinel QA (Selenium)</button>
+                    <button onclick="testQA('VUL')" class="w-full text-left p-3 border border-slate-800 rounded-lg text-xs hover:bg-slate-800 transition">3. Test de Inyección SQL/Data Integrity</button>
                 </div>
                 <div id="resultadoTest" class="mt-4 p-3 bg-black/50 rounded-lg text-[11px] font-mono text-blue-400 hidden italic"></div>
             </div>
@@ -48,35 +48,19 @@
         </div>
     </section>
 
-    <section id="contacto" class="py-12 bg-slate-900/50 text-center px-6">
+    <section id="contacto" class="py-12 bg-slate-900/50 text-center px-6 border-t border-slate-900">
+        <h3 class="text-xl font-bold text-white mb-8 uppercase tracking-widest">Enlace de Respuesta Inmediata</h3>
         <div class="flex flex-col md:flex-row justify-center gap-4 max-w-xl mx-auto">
-            <a href="https://wa.me/51912648708" target="_blank" class="flex-1 px-6 py-3 bg-green-600 text-white font-bold rounded-lg text-xs tracking-widest">WHATSAPP</a>
-            <a href="https://t.me/+51912648708" target="_blank" class="flex-1 px-6 py-3 bg-sky-600 text-white font-bold rounded-lg text-xs tracking-widest">TELEGRAM</a>
+            <a href="https://wa.me/51912648708?text=Hola%20MRA%20vanguard,%20solicito%20consultoría." target="_blank" class="flex-1 px-6 py-4 bg-green-600 hover:bg-green-700 text-white font-black rounded-lg text-[10px] tracking-widest transition-transform hover:-translate-y-1">WHATSAPP</a>
+            <a href="https://t.me/+51912648708" target="_blank" class="flex-1 px-6 py-4 bg-sky-600 hover:bg-sky-700 text-white font-black rounded-lg text-[10px] tracking-widest transition-transform hover:-translate-y-1">TELEGRAM</a>
         </div>
     </section>
 
-    <script>
-        function analizarUrl() {
-            const url = document.getElementById('urlInput').value;
-            const res = document.getElementById('resultadoUrl');
-            res.classList.remove('hidden');
-            if(url === "") { res.innerHTML = "> ERROR: URL requerida."; return; }
-            res.innerHTML = > Analizando: ${url}<br>> Búsqueda lineal iniciada...<br>> Protocolo: OK<br>> Estructura: Validada.;
-        }
-
-        function testQA(tipo) {
-            const res = document.getElementById('resultadoTest');
-            res.classList.remove('hidden');
-            let msj = "";
-            if(tipo === 'SSL') msj = "> Ejecutando Check SSL... [CERTIFICADO VÁLIDO]";
-            if(tipo === 'QA') msj = "> Selenium Worker iniciado... Pruebas de UI finalizadas: 0 errores.";
-            if(tipo === 'VUL') msj = "> Analizando puntos de inyección... No se detectaron brechas críticas.";
-            res.innerHTML = msj;
-        }
-    </script>
-
-    <footer class="py-8 text-center text-[10px] text-slate-600 tracking-[0.3em] uppercase">
-        MRA vanguard &copy; 2026 | Ingeniería de Seguridad
+    <footer class="py-10 text-center text-[10px] text-slate-600 tracking-[0.3em] uppercase font-bold">
+        MRA vanguard &copy; 2026 | Engineering Defense & Infrastructure
     </footer>
+
+    <script src="js/main.js"></script>
+
 </body>
 </html>
