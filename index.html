@@ -1,66 +1,74 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MRA vanguard | Engineering & Defense</title>
+    <title>MRA Vanguard | Ciberseguridad & Consultoría</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body class="bg-slate-950 text-slate-200 font-sans selection:bg-blue-500 selection:text-white">
+<body class="bg-slate-900 text-white font-sans">
 
-    <nav class="sticky top-0 z-50 bg-slate-950/90 backdrop-blur-md border-b border-slate-800 p-5">
-        <div class="max-w-6xl mx-auto flex justify-between items-center">
-            <h1 class="text-2xl font-black tracking-tighter uppercase italic">
-                <span class="text-blue-500">MRA</span> <span class="text-white">vanguard</span>
-            </h1>
-            <div class="hidden md:flex space-x-6 text-xs font-bold tracking-widest uppercase items-center">
-                <a href="#módulos" class="hover:text-blue-400 transition text-[10px]">Herramientas</a>
-                <a href="#contacto" class="px-4 py-2 border border-blue-500 text-blue-500 rounded hover:bg-blue-500 hover:text-white transition text-[10px]">CONTACTO</a>
+    <nav class="fixed w-full z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold tracking-tighter text-blue-500">MRA VANGUARD</h1>
+            <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest">
+                <a href="#inicio" class="hover:text-blue-400 transition">Inicio</a>
+                <a href="#servicios" class="hover:text-blue-400 transition">Servicios</a>
+                <a href="#contacto" class="hover:text-blue-400 transition">Contacto</a>
             </div>
         </div>
     </nav>
 
-    <section id="módulos" class="py-16 max-w-5xl mx-auto px-6">
-        <h2 class="text-center text-3xl font-black mb-12 text-white uppercase tracking-tighter italic">Centro de Pruebas & Análisis</h2>
-        
-        <div class="grid md:grid-cols-2 gap-10">
-            
-            <div class="p-8 bg-slate-900 rounded-2xl border border-slate-800">
-                <h4 class="text-blue-500 font-bold uppercase mb-4 text-sm"><i class="fas fa-search-nodes mr-2"></i> Análisis Lineal de URL</h4>
-                <p class="text-xs text-slate-500 mb-6">Valida la estructura y protocolos de seguridad de cualquier dominio.</p>
-                <input id="urlInput" type="text" placeholder="https://ejemplo.com" class="w-full bg-slate-800 border border-slate-700 p-3 rounded-lg text-sm mb-4 outline-none focus:border-blue-500 text-white">
-                <button onclick="analizarUrl()" class="w-full bg-blue-600 p-3 rounded-lg font-bold text-xs uppercase hover:bg-blue-700 transition">Ejecutar Protocolo</button>
-                <div id="resultadoUrl" class="mt-4 p-3 bg-black/50 rounded-lg text-[11px] font-mono text-green-400 hidden"></div>
-            </div>
+    <section id="inicio" class="h-screen flex items-center justify-center bg-gradient-to-b from-slate-900 to-slate-800">
+        <div class="text-center px-6">
+            <h2 class="text-5xl md:text-7xl font-extrabold mb-6">Protección Digital <span class="text-blue-600">Avanzada</span></h2>
+            <p class="text-slate-400 text-lg mb-8 max-w-2xl mx-auto">Ingeniería de vanguardia en ciberseguridad y QA. Blindamos tu infraestructura crítica contra las amenazas del mañana.</p>
+            <a href="#contacto" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-bold transition duration-300">Solicitar Auditoría</a>
+        </div>
+    </section>
 
-            <div class="p-8 bg-slate-900 rounded-2xl border border-slate-800">
-                <h4 class="text-blue-500 font-bold uppercase mb-4 text-sm"><i class="fas fa-bug text-sm mr-2"></i> Diagnóstico Express QA/Security</h4>
-                <p class="text-xs text-slate-500 mb-6">Simulación de procesos Sentinel QA y Legacy Bridge.</p>
-                <div class="space-y-3">
-                    <button onclick="testQA('SSL')" class="w-full text-left p-3 border border-slate-800 rounded-lg text-xs hover:bg-slate-800 transition">1. Verificar Certificado SSL/TLS</button>
-                    <button onclick="testQA('QA')" class="w-full text-left p-3 border border-slate-800 rounded-lg text-xs hover:bg-slate-800 transition">2. Ejecutar Sentinel QA (Selenium)</button>
-                    <button onclick="testQA('VUL')" class="w-full text-left p-3 border border-slate-800 rounded-lg text-xs hover:bg-slate-800 transition">3. Test de Inyección SQL/Data Integrity</button>
+    <section id="servicios" class="py-20 bg-slate-800 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h3 class="text-3xl font-bold mb-12 text-center">Nuestras Capacidades</h3>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-8 bg-slate-900 border border-slate-700 rounded-2xl hover:border-blue-500 transition">
+                    <i class="fas fa-shield-alt text-4xl text-blue-500 mb-4"></i>
+                    <h4 class="text-xl font-bold mb-2">Ciberseguridad</h4>
+                    <p class="text-slate-400">Análisis de vulnerabilidades y defensa perimetral estratégica.</p>
                 </div>
-                <div id="resultadoTest" class="mt-4 p-3 bg-black/50 rounded-lg text-[11px] font-mono text-blue-400 hidden italic"></div>
+                <div class="p-8 bg-slate-900 border border-slate-700 rounded-2xl hover:border-blue-500 transition">
+                    <i class="fas fa-bug text-4xl text-blue-500 mb-4"></i>
+                    <h4 class="text-xl font-bold mb-2">QA Testing</h4>
+                    <p class="text-slate-400">Automatización de pruebas y aseguramiento de calidad de software.</p>
+                </div>
+                <div class="p-8 bg-slate-900 border border-slate-700 rounded-2xl hover:border-blue-500 transition">
+                    <i class="fas fa-database text-4xl text-blue-500 mb-4"></i>
+                    <h4 class="text-xl font-bold mb-2">DB Administration</h4>
+                    <p class="text-slate-400">Gestión segura y optimización de bases de datos críticas.</p>
+                </div>
             </div>
-
         </div>
     </section>
 
-    <section id="contacto" class="py-12 bg-slate-900/50 text-center px-6 border-t border-slate-900">
-        <h3 class="text-xl font-bold text-white mb-8 uppercase tracking-widest">Enlace de Respuesta Inmediata</h3>
-        <div class="flex flex-col md:flex-row justify-center gap-4 max-w-xl mx-auto">
-            <a href="https://wa.me/51912648708?text=Hola%20MRA%20vanguard,%20solicito%20consultoría." target="_blank" class="flex-1 px-6 py-4 bg-green-600 hover:bg-green-700 text-white font-black rounded-lg text-[10px] tracking-widest transition-transform hover:-translate-y-1">WHATSAPP</a>
-            <a href="https://t.me/+51912648708" target="_blank" class="flex-1 px-6 py-4 bg-sky-600 hover:bg-sky-700 text-white font-black rounded-lg text-[10px] tracking-widest transition-transform hover:-translate-y-1">TELEGRAM</a>
+    <section id="contacto" class="py-20 px-6">
+        <div class="max-w-4xl mx-auto bg-slate-800 p-10 rounded-3xl shadow-2xl">
+            <h3 class="text-3xl font-bold mb-8 text-center">Contactar con Consultoría</h3>
+            <form id="contactForm" class="space-y-6">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <input type="text" id="name" placeholder="Nombre" class="w-full bg-slate-900 border border-slate-700 p-4 rounded-lg focus:outline-none focus:border-blue-500" required>
+                    <input type="email" id="email" placeholder="Email" class="w-full bg-slate-900 border border-slate-700 p-4 rounded-lg focus:outline-none focus:border-blue-500" required>
+                </div>
+                <textarea id="message" rows="4" placeholder="¿Cómo podemos ayudarte?" class="w-full bg-slate-900 border border-slate-700 p-4 rounded-lg focus:outline-none focus:border-blue-500" required></textarea>
+                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 p-4 rounded-lg font-bold transition">Enviar Mensaje</button>
+            </form>
         </div>
     </section>
 
-    <footer class="py-10 text-center text-[10px] text-slate-600 tracking-[0.3em] uppercase font-bold">
-        MRA vanguard &copy; 2026 | Engineering Defense & Infrastructure
+    <footer class="py-10 text-center text-slate-500 border-t border-slate-800">
+        <p>&copy; 2026 MRA VANGUARD. Todos los derechos reservados.</p>
     </footer>
 
-    <script src="js/main.js"></script>
-
+    <script src="main.js"></script>
 </body>
 </html>
