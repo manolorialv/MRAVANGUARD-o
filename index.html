@@ -5,146 +5,162 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MRA VANGUARD | Cyber-Armor Engineering</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@900&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #050505; color: #e5e5e5; }
-        .glass { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); }
-        .neon-glow:focus { box-shadow: 0 0 20px rgba(59, 130, 246, 0.4); border-color: #3b82f6; }
-        .bento-card { transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
-        .bento-card:hover { transform: translateY(-5px); border-color: #3b82f6; background: rgba(59, 130, 246, 0.05); }
+        :root { --accent: #00ff41; } /* Verde terminal o puedes usar #3b82f6 para azul */
+        body { background-color: #000; color: #fff; font-family: 'JetBrains Mono', monospace; }
+        .h1-bold { font-family: 'Inter', sans-serif; font-weight: 900; letter-spacing: -0.05em; }
+        .border-thin { border: 1px solid rgba(255, 255, 255, 0.1); }
+        .scanline {
+            width: 100%; height: 2px; background: rgba(0, 255, 65, 0.1);
+            position: absolute; animation: scan 4s linear infinite;
+        }
+        @keyframes scan { 0% { top: 0; } 100% { top: 100%; } }
+        .grid-bg {
+            background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 0);
+            background-size: 40px 40px;
+        }
     </style>
 </head>
-<body class="antialiased selection:bg-blue-500/30">
+<body class="grid-bg">
 
-    <nav class="fixed w-full z-50 py-4 px-6 md:px-12 glass flex justify-between items-center border-b border-white/5">
-        <div class="text-xl font-black tracking-tighter">MRA <span class="text-blue-500">VANGUARD</span></div>
-        <div class="hidden md:flex space-x-8 text-xs uppercase tracking-widest font-bold">
-            <a href="#inicio" class="hover:text-blue-400 transition">Sistemas</a>
-            <a href="#scanner" class="text-blue-500">Security Lab</a>
-            <a href="#servicios" class="hover:text-blue-400 transition">Servicios</a>
-            <a href="#contacto" class="hover:text-blue-400 transition">Contacto</a>
+    <header class="p-6 flex justify-between items-center border-b border-white/10 sticky top-0 bg-black/80 backdrop-blur-md z-50">
+        <div class="flex items-center gap-2">
+            <div class="w-3 h-3 bg-blue-600 rounded-full animate-pulse"></div>
+            <span class="font-bold tracking-tighter text-xl text-white">MRA VANGUARD</span>
         </div>
-    </nav>
+        <nav class="hidden md:flex gap-10 text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold">
+            <a href="#lab" class="hover:text-white transition">Lab_Scanner</a>
+            <a href="#servicios" class="hover:text-white transition">Services_Core</a>
+            <a href="#contacto" class="text-blue-500 hover:text-blue-400">Establish_Contact</a>
+        </nav>
+    </header>
 
-    <section id="inicio" class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20">
-        <div class="inline-block px-4 py-1 border border-blue-500/30 rounded-full text-blue-400 text-xs font-bold mb-6 tracking-widest uppercase">
-            Cybersecurity & Systems Optimization
-        </div>
-        <h1 class="text-4xl md:text-7xl font-extrabold mb-6 tracking-tight">Evolución Digital <br><span class="text-blue-600">Sin Vulnerabilidades</span></h1>
-        <p class="max-w-xl text-gray-500 text-base md:text-lg mb-10">
-            Ingeniería de vanguardia aplicada a la seguridad de datos y la modernización de infraestructuras críticas en entornos corporativos.
+    <section class="relative h-[80vh] flex flex-col justify-center px-10 md:px-24 overflow-hidden">
+        <div class="scanline"></div>
+        <span class="text-blue-500 text-xs mb-4 tracking-[0.5em] font-bold">ENGINEERING & DEFENSE // 2026</span>
+        <h1 class="h1-bold text-6xl md:text-9xl uppercase leading-none mb-6">Cyber <br> Armor.</h1>
+        <p class="max-w-md text-gray-500 text-sm leading-relaxed border-l-2 border-blue-600 pl-4">
+            Consultoría técnica de alto nivel. Especialistas en blindaje de infraestructura crítica, modernización de sistemas legacy (FoxPro/VB6) y administración de bases de datos de alta disponibilidad.
         </p>
     </section>
 
-    <section id="scanner" class="py-20 px-6 bg-blue-600/5 border-y border-blue-900/20">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-2xl font-bold mb-2">MRA Security Lab</h2>
-            <p class="text-gray-400 text-sm mb-8 font-mono">Verificación de amenazas mediante Google Safe Browsing API</p>
+    <section id="lab" class="p-10 md:p-24 border-y border-white/10 bg-zinc-950/50">
+        <div class="max-w-5xl mx-auto">
+            <div class="mb-10">
+                <h2 class="text-xs text-blue-500 font-bold tracking-widest mb-2 uppercase">[ 01. Real-time Scanner ]</h2>
+                <p class="text-2xl font-bold">Diagnóstico de Amenazas Externas</p>
+            </div>
             
-            <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
-                <input id="urlInput" type="text" placeholder="https://ejemplo-sospechoso.com" 
-                class="w-full md:w-2/3 p-4 bg-black border border-gray-800 rounded-xl neon-glow outline-none font-mono text-sm">
-                <button onclick="checkURL()" class="w-full md:w-auto bg-blue-600 hover:bg-blue-500 text-white px-8 py-4 rounded-xl font-bold transition flex items-center justify-center gap-2">
-                    <span>Escanear Objetivo</span>
+            <div class="flex flex-col md:flex-row gap-0">
+                <input id="urlInput" type="text" placeholder="ENTRADA_DOMINIO_URL..." 
+                class="flex-1 bg-transparent border border-white/20 p-5 outline-none focus:border-blue-500 font-mono text-sm uppercase">
+                <button onclick="checkURL()" class="bg-blue-600 text-black font-bold p-5 hover:bg-blue-400 transition text-sm uppercase tracking-tighter">
+                    Ejecutar_Analisis()
                 </button>
             </div>
             
-            <div id="resultBox" class="mt-8 hidden p-6 rounded-2xl glass border-blue-500/20 text-left animate-pulse">
-                <p id="resultText" class="font-mono text-sm"></p>
+            <div id="resultBox" class="mt-4 hidden p-6 border border-blue-500/30 bg-blue-500/5">
+                <pre id="resultText" class="whitespace-pre-wrap text-[12px]"></pre>
             </div>
         </div>
     </section>
 
-    <section id="servicios" class="py-24 px-6 md:px-20 max-w-7xl mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div class="bento-card glass p-8 rounded-3xl border border-white/5">
-                <h3 class="text-lg font-bold mb-2">Auditoría de Infraestructura</h3>
-                <p class="text-gray-500 text-sm leading-relaxed">Evaluación de perímetros y hardening de servidores bajo normativas internacionales.</p>
+    <section id="servicios" class="p-10 md:p-24">
+        <h2 class="text-[10px] text-gray-600 font-bold tracking-[0.5em] mb-12 uppercase">SERVICES_PORTFOLIO</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 border-t border-l border-white/10">
+            <div class="border-r border-b border-white/10 p-10 hover:bg-white/[0.02] transition">
+                <span class="text-blue-500 text-xs font-bold">01/</span>
+                <h3 class="font-bold my-4">PENTESTING & AUDIT</h3>
+                <p class="text-gray-500 text-xs leading-relaxed">Auditoría profunda de vulnerabilidades en redes corporativas y cumplimiento SBS/SUNAT.</p>
             </div>
-            <div class="bento-card bg-blue-600/10 p-8 rounded-3xl border border-blue-500/30 md:col-span-2">
-                <h3 class="text-xl font-bold mb-2 text-blue-400">MRA Academy: Formación IT</h3>
-                <p class="text-gray-400 text-sm leading-relaxed">Capacitación técnica de élite en administración segura de bases de datos (SQL/Oracle) y prevención de ingeniería social para equipos de trabajo.</p>
-                <div class="mt-4 flex gap-2">
-                    <span class="text-[10px] bg-blue-500/20 px-2 py-1 rounded text-blue-300">DBA Training</span>
-                    <span class="text-[10px] bg-blue-500/20 px-2 py-1 rounded text-blue-300">Cyber-Awareness</span>
+            <div class="border-r border-b border-white/10 p-10 hover:bg-white/[0.02] transition">
+                <span class="text-blue-500 text-xs font-bold">02/</span>
+                <h3 class="font-bold my-4">LEGACY SHIELD</h3>
+                <p class="text-gray-500 text-xs leading-relaxed">Hardening y modernización de sistemas críticos construidos en FoxPro y Visual Basic 6.</p>
+            </div>
+            <div class="border-r border-b border-white/10 p-10 hover:bg-white/[0.02] transition">
+                <span class="text-blue-500 text-xs font-bold">03/</span>
+                <h3 class="font-bold my-4">DBA ARCHITECTURE</h3>
+                <p class="text-gray-500 text-xs leading-relaxed">Gestión avanzada de SQL Server y Oracle. Alta disponibilidad y recuperación ante desastres.</p>
+            </div>
+            <div class="border-r border-b border-white/10 p-10 bg-blue-600 text-black hover:bg-blue-400 transition">
+                <span class="text-black text-xs font-bold">04/</span>
+                <h3 class="font-bold my-4 uppercase tracking-tighter">MRA Academy</h3>
+                <p class="text-black/80 text-xs leading-relaxed font-bold">Capacitación de élite para equipos de TI. Ciberseguridad aplicada y administración técnica.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="p-10 md:px-24 pb-32">
+        <div class="max-w-2xl border border-white/10 p-10">
+            <h3 class="text-xs text-blue-500 font-bold tracking-widest mb-8 uppercase">> CONTACTO_PROTOCOLO</h3>
+            <form action="#" class="space-y-6">
+                <div class="border-b border-white/20 pb-2">
+                    <label class="block text-[10px] text-gray-600 uppercase">Client_Identity</label>
+                    <input type="text" class="w-full bg-transparent outline-none py-2 text-sm uppercase">
                 </div>
-            </div>
-            <div class="bento-card glass p-8 rounded-3xl border border-white/5">
-                <h3 class="text-lg font-bold mb-2">Sistemas Legacy</h3>
-                <p class="text-gray-500 text-sm leading-relaxed">Recuperación y blindaje de aplicaciones críticas en FoxPro y Visual Basic 6.</p>
-            </div>
-            <div class="bento-card glass p-8 rounded-3xl border border-white/5">
-                <h3 class="text-lg font-bold mb-2">DBA Management</h3>
-                <p class="text-gray-500 text-sm leading-relaxed">Arquitectura y alta disponibilidad en SQL Server y motores Oracle.</p>
-            </div>
-            <div class="bento-card glass p-8 rounded-3xl border border-white/5">
-                <h3 class="text-lg font-bold mb-2">CISO as a Service</h3>
-                <p class="text-gray-500 text-sm leading-relaxed">Gestión estratégica de ciberseguridad para empresas en crecimiento.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="contacto" class="py-24 px-6 border-t border-white/5">
-        <div class="max-w-xl mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-10">Conecte con MRA Vanguard</h2>
-            <form action="#" class="space-y-4 text-left">
-                <input type="text" placeholder="Nombre / Empresa" class="w-full p-4 bg-white/5 border border-white/10 rounded-xl outline-none focus:border-blue-500 transition">
-                <input type="email" placeholder="Email de contacto" class="w-full p-4 bg-white/5 border border-white/10 rounded-xl outline-none focus:border-blue-500 transition">
-                <textarea placeholder="Descripción técnica del requerimiento" rows="4" class="w-full p-4 bg-white/5 border border-white/10 rounded-xl outline-none focus:border-blue-500 transition"></textarea>
-                <button class="w-full bg-blue-600 py-4 rounded-xl font-bold hover:bg-blue-700 transition tracking-widest text-sm uppercase">Enviar Requerimiento</button>
+                <div class="border-b border-white/20 pb-2">
+                    <label class="block text-[10px] text-gray-600 uppercase">Comm_Channel (Email)</label>
+                    <input type="email" class="w-full bg-transparent outline-none py-2 text-sm">
+                </div>
+                <div class="border-b border-white/20 pb-2">
+                    <label class="block text-[10px] text-gray-600 uppercase">System_Requirements</label>
+                    <textarea class="w-full bg-transparent outline-none py-2 text-sm uppercase resize-none" rows="3"></textarea>
+                </div>
+                <button class="text-xs border border-blue-600 text-blue-600 px-10 py-4 hover:bg-blue-600 hover:text-black transition uppercase font-bold tracking-widest">
+                    Inicializar_Petición
+                </button>
             </form>
         </div>
     </section>
 
-    <footer class="py-12 border-t border-white/5 text-center text-gray-600 text-[10px] tracking-[0.2em] uppercase">
-        © 2026 MRA Vanguard // Lima, Peru // Engineering & Security
+    <footer class="p-10 border-t border-white/10 flex justify-between items-center text-[10px] text-gray-600 tracking-[0.2em] uppercase">
+        <div>MRA_VANGUARD_v2.0</div>
+        <div>LIMA_PERU_2026</div>
     </footer>
 
     <script>
         async function checkURL() {
-            const url = document.getElementById('urlInput').value;
+            const urlInput = document.getElementById('urlInput');
             const resultBox = document.getElementById('resultBox');
             const resultText = document.getElementById('resultText');
             
-            if(!url) return alert("Ingresa una URL");
+            if(!urlInput.value) return;
 
             resultBox.classList.remove('hidden');
-            resultText.innerHTML = "> Iniciando análisis heurístico...";
-            resultText.className = "font-mono text-sm text-blue-400";
+            resultText.innerText = `[INFO] ESCANEANDO: ${urlInput.value}\n[INFO] CONECTANDO CON GOOGLE SAFE BROWSING API...\n[WAIT] ANALIZANDO HEURÍSTICA...`;
 
-            // Reemplaza 'TU_API_KEY' con tu llave real de Google Cloud Console
+            // Nota: Aquí pones tu API KEY de Google Cloud Console
             const API_KEY = 'TU_API_KEY'; 
             const endpoint = `https://safebrowsing.googleapis.com/v4/threatMatches:find?key=${API_KEY}`;
-
-            const body = {
-                "client": {"clientId": "mravanguard", "clientVersion": "1.0.0"},
+            
+            const payload = {
+                "client": {"clientId": "mra-v", "clientVersion": "1.0"},
                 "threatInfo": {
-                    "threatTypes": ["MALWARE", "SOCIAL_ENGINEERING", "UNWANTED_SOFTWARE"],
+                    "threatTypes": ["MALWARE", "SOCIAL_ENGINEERING"],
                     "platformTypes": ["ANY_PLATFORM"],
                     "threatEntryTypes": ["URL"],
-                    "threatEntries": [{"url": url}]
+                    "threatEntries": [{"url": urlInput.value}]
                 }
             };
 
             try {
-                const response = await fetch(endpoint, {
-                    method: 'POST',
-                    body: JSON.stringify(body)
-                });
+                const response = await fetch(endpoint, { method: 'POST', body: JSON.stringify(payload) });
                 const data = await response.json();
-
-                resultBox.classList.remove('animate-pulse');
                 
-                if (data.matches) {
-                    resultText.innerHTML = `[ALERTA] EL SITIO ${url} ES MALICIOSO. TIPO: ${data.matches[0].threatType}`;
-                    resultText.className = "font-mono text-sm text-red-500 font-bold";
-                } else {
-                    resultText.innerHTML = `[OK] EL SITIO ${url} NO PRESENTA AMENAZAS CONOCIDAS EN LA BASE DE DATOS DE GOOGLE.`;
-                    resultText.className = "font-mono text-sm text-green-500 font-bold";
-                }
-            } catch (error) {
-                resultText.innerHTML = "Error de conexión con el laboratorio. Revisa la API Key.";
-                resultText.className = "font-mono text-sm text-yellow-500";
+                setTimeout(() => {
+                    if(data.matches) {
+                        resultText.innerText = `[ALERTA] AMENAZA DETECTADA\n[STATUS] EL SITIO ES MALICIOSO\n[TYPE] ${data.matches[0].threatType}`;
+                        resultText.classList.add('text-red-500');
+                    } else {
+                        resultText.innerText = `[SAFE] NO SE ENCONTRARON AMENAZAS\n[STATUS] EL SITIO PARECE SEGURO\n[DB] GOOGLE_SAFE_BROWSING_V4`;
+                        resultText.classList.add('text-blue-500');
+                    }
+                }, 1500);
+            } catch (e) {
+                resultText.innerText = `[ERROR] FALLO EN LA CONEXIÓN API. REVISE CREDENCIALES.`;
             }
         }
     </script>
