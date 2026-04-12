@@ -1,72 +1,255 @@
-<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MRA Vanguard | Secure Engineering & Legacy Rescue</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
+        
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background-color: #030712;
+        }
+
+        .glass-panel {
+            background: rgba(17, 24, 39, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .service-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            background: rgba(31, 41, 55, 0.5);
+            border-color: rgba(37, 99, 235, 0.4);
+        }
+
+        .tech-badge {
+            background: rgba(2, 6, 23, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        @keyframes pulse-soft {
+            0%, 100% { opacity: 0.1; }
+            50% { opacity: 0.2; }
+        }
+
+        .bg-glow {
+            animation: pulse-soft 4s infinite;
+        }
+    </style>
+</head>
+<body class="text-slate-300 antialiased">
+
+    <div class="fixed inset-0 overflow-hidden pointer-events-none">
+        <div class="absolute -top-[10%] -left-[10%] w-[40%] h-[40%] bg-blue-600/20 rounded-full blur-[120px] bg-glow"></div>
+        <div class="absolute -bottom-[10%] -right-[10%] w-[40%] h-[40%] bg-indigo-600/10 rounded-full blur-[120px] bg-glow"></div>
+    </div>
+
+    <nav class="fixed w-full z-50 py-6 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-8 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-12 h-12 bg-blue-600 rounded-sm flex items-center justify-center shadow-2xl shadow-blue-600/40">
+                    <span class="text-2xl font-extrabold text-white">V</span>
+                </div>
+                <div>
+                    <span class="block text-xl font-extrabold tracking-[0.2em] text-white uppercase leading-none">MRA VANGUARD</span>
+                    <span class="text-[8px] font-bold text-blue-500 tracking-[0.4em] uppercase">Engineering Unit</span>
+                </div>
+            </div>
+            <div class="hidden md:flex items-center gap-12 text-[10px] font-extrabold uppercase tracking-[0.3em]">
+                <a href="#inicio" class="hover:text-blue-500 transition-colors">Inicio</a>
+                <a href="#servicios" class="hover:text-blue-500 transition-colors">Operaciones</a>
+                <a href="#pruebas" class="hover:text-blue-500 transition-colors">Scan Lab</a>
+                <a href="#contacto" class="px-6 py-3 border border-blue-500/50 text-blue-400 hover:bg-blue-600 hover:text-white transition-all">Consultoría</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="inicio" class="relative min-h-screen flex items-center justify-center pt-20">
+        <div class="max-w-5xl mx-auto px-8 text-center relative z-10">
+            <h2 class="text-blue-500 text-[10px] font-extrabold uppercase tracking-[0.8em] mb-6">Lima, Perú | Seguridad de Grado Militar</h2>
+            <h1 class="text-6xl md:text-8xl font-black text-white mb-8 tracking-tighter uppercase">
+                RESILIENCIA <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-700">TECNOLÓGICA</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-400 mb-12 max-w-3xl mx-auto font-light leading-relaxed">
+                Ingeniería táctica enfocada en el rescate de sistemas críticos y blindaje normativo. <br>
+                <span class="text-blue-400 font-semibold italic">"No parches el problema, construye algo que no se rompa."</span>
+            </p>
+            <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                <a href="#servicios" class="bg-blue-600 hover:bg-blue-700 text-white px-12 py-5 font-extrabold uppercase tracking-widest text-[10px] shadow-2xl shadow-blue-900/40">Explorar Soluciones</a>
+                <a href="#pruebas" class="glass-panel px-12 py-5 font-extrabold text-white hover:bg-slate-800 uppercase tracking-widest text-[10px]">Laboratorio Digital</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicios" class="py-32 px-8 relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-24 text-center">
+                <h3 class="text-4xl font-extrabold text-white mb-4 uppercase tracking-tighter italic">Portafolio de Ingeniería</h3>
+                <div class="h-1 w-24 bg-blue-600 mx-auto"></div>
+                <p class="text-slate-500 mt-6 uppercase tracking-[0.5em] text-[10px] font-extrabold">Infraestructura Crítica & Compliance Peruano</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
-    <div class="service-card glass p-8 rounded-3xl border-t-4 border-t-blue-600 transition-all duration-500">
-        <div class="flex justify-between items-start mb-4">
-            <span class="text-[9px] text-blue-400 font-black uppercase tracking-[0.2em]">Legacy System Refactoring</span>
-            <i class="fas fa-microchip text-blue-600 opacity-50"></i>
-        </div>
-        <h4 class="text-xl font-bold text-white mb-3">Rescate de Sistemas Antiguos</h4>
-        <p class="text-slate-400 mb-6 text-[12px] leading-relaxed">Recuperamos la operatividad de software crítico en tecnologías que el mercado ya no soporta, evitando la pérdida de data histórica y funcional.</p>
-        <div class="space-y-4 bg-slate-950/50 p-4 rounded-2xl border border-white/5">
-            <p class="text-[10px] text-slate-300"><i class="fas fa-terminal text-blue-500 mr-2"></i><strong>Ingeniería:</strong> Debugging y optimización de código en FoxPro, C#, VB6 y SQL Server 2000-2019.</p>
-            <p class="text-[10px] text-slate-300"><i class="fas fa-database text-blue-500 mr-2"></i><strong>Data Ops:</strong> Migración de estructuras Legacy a arquitecturas modernas en la nube (AWS/Azure).</p>
-            <p class="text-[10px] text-slate-500 uppercase font-black tracking-tighter">Estándar: ISO/IEC 25010</p>
-        </div>
-    </div>
+                <div class="service-card glass-panel p-8 border-t-2 border-blue-600">
+                    <div class="flex justify-between items-start mb-6">
+                        <span class="text-[9px] text-blue-400 font-extrabold uppercase tracking-widest">Legacy Refactoring Unit</span>
+                        <i class="fas fa-microchip text-blue-600/40 text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-4">Rescate de Sistemas Antiguos</h4>
+                    <p class="text-slate-400 mb-8 text-xs leading-relaxed">Recuperamos la operatividad de activos críticos en FoxPro, Visual Basic y SQL Server Legacy que el mercado ya no soporta.</p>
+                    <div class="tech-badge p-5 rounded-sm space-y-4">
+                        <p class="text-[10px] text-slate-300"><i class="fas fa-terminal text-blue-500 mr-3"></i><strong>Stack:</strong> FoxPro, C#, VB6, SQL 2000-2022.</p>
+                        <p class="text-[10px] text-slate-300"><i class="fas fa-database text-blue-500 mr-3"></i><strong>Acción:</strong> Refactorización de core, limpieza de DB y migración Cloud.</p>
+                        <div class="pt-4 border-t border-white/5 flex justify-between items-center">
+                            <span class="text-[8px] font-black uppercase text-slate-500 tracking-widest italic">Estándar: ISO/IEC 25010</span>
+                        </div>
+                    </div>
+                </div>
 
-    <div class="service-card glass p-8 rounded-3xl border-t-4 border-t-red-600 transition-all duration-500">
-        <div class="flex justify-between items-start mb-4">
-            <span class="text-[9px] text-red-400 font-black uppercase tracking-[0.2em]">High Availability & QA</span>
-            <i class="fas fa-eye text-red-600 opacity-50"></i>
-        </div>
-        <h4 class="text-xl font-bold text-white mb-3">Vigilante de Ventas 24/7</h4>
-        <p class="text-slate-400 mb-6 text-[12px] leading-relaxed">Monitoreo persistente de pasarelas de pago y flujos críticos. Si el cliente no puede pagar, el sistema nos alerta antes que tú pierdas la venta.</p>
-        <div class="space-y-4 bg-slate-950/50 p-4 rounded-2xl border border-white/5">
-            <p class="text-[10px] text-slate-300"><i class="fas fa-robot text-red-500 mr-2"></i><strong>Técnico:</strong> Bots de simulación transaccional con Python, Selenium y JMeter para carga crítica.</p>
-            <p class="text-[10px] text-slate-300"><i class="fas fa-integrations text-red-500 mr-2"></i><strong>Integración:</strong> Monitoreo de APIs de Niubiz, Culqi, Izipay y validación SEE de SUNAT.</p>
-            <p class="text-[10px] text-slate-500 uppercase font-black tracking-tighter">Estándar: ISTQB Excellence</p>
-        </div>
-    </div>
+                <div class="service-card glass-panel p-8 border-t-2 border-red-600">
+                    <div class="flex justify-between items-start mb-6">
+                        <span class="text-[9px] text-red-400 font-extrabold uppercase tracking-widest">QA Automation & Uptime</span>
+                        <i class="fas fa-eye text-red-600/40 text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-4">Vigilante de Ventas 24/7</h4>
+                    <p class="text-slate-400 mb-8 text-xs leading-relaxed">Monitoreo persistente de pasarelas de pago y flujos críticos de negocio. Blindaje contra caídas transaccionales.</p>
+                    <div class="tech-badge p-5 rounded-sm space-y-4">
+                        <p class="text-[10px] text-slate-300"><i class="fas fa-robot text-red-500 mr-3"></i><strong>Técnico:</strong> Bots Python/Selenium testeando flujo SEE SUNAT y pasarelas.</p>
+                        <p class="text-[10px] text-slate-300"><i class="fas fa-integrations text-red-500 mr-3"></i><strong>Foco:</strong> Niubiz, Culqi, Izipay y Monitoreo de APIs críticas.</p>
+                        <div class="pt-4 border-t border-white/5 flex justify-between items-center">
+                            <span class="text-[8px] font-black uppercase text-slate-500 tracking-widest italic">Estándar: ISTQB Excellence</span>
+                        </div>
+                    </div>
+                </div>
 
-    <div class="service-card glass p-8 rounded-3xl border-t-4 border-t-green-500 transition-all duration-500">
-        <div class="flex justify-between items-start mb-4">
-            <span class="text-[9px] text-green-400 font-black uppercase tracking-[0.2em]">Regulatory Compliance Unit</span>
-            <i class="fas fa-balance-scale text-green-600 opacity-50"></i>
-        </div>
-        <h4 class="text-xl font-bold text-white mb-3">Escudo Anti-Multas y Auditoría</h4>
-        <p class="text-slate-400 mb-6 text-[12px] leading-relaxed">Adecuación técnica de activos digitales frente a los entes reguladores en Perú (ANPD, SBS, SMV) para proteger el patrimonio legal.</p>
-        <div class="space-y-4 bg-slate-950/50 p-4 rounded-2xl border border-white/5">
-            <p class="text-[10px] text-slate-300"><i class="fas fa-file-shield text-green-500 mr-2"></i><strong>Privacidad:</strong> Registro de Bancos de Datos ante Minjus según Ley 29733 y Directivas de Seguridad.</p>
-            <p class="text-[10px] text-slate-300"><i class="fas fa-university text-green-500 mr-2"></i><strong>Finanzas:</strong> Auditoría de cumplimiento bajo Res. SBS 504-2021 y Modelo de Prevención Ley 30424.</p>
-            <p class="text-[10px] text-slate-500 uppercase font-black tracking-tighter">Norma: NTP-ISO/IEC 27001</p>
-        </div>
-    </div>
+                <div class="service-card glass-panel p-8 border-t-2 border-green-500">
+                    <div class="flex justify-between items-start mb-6">
+                        <span class="text-[9px] text-green-400 font-extrabold uppercase tracking-widest">Regulatory Compliance Lab</span>
+                        <i class="fas fa-shield-halved text-green-500/40 text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-4">Escudo Anti-Multas y Auditoría</h4>
+                    <p class="text-slate-400 mb-8 text-xs leading-relaxed">Adecuación técnica total frente a la ANPD, SBS y el marco legal peruano para blindar el patrimonio de la empresa.</p>
+                    <div class="tech-badge p-5 rounded-sm space-y-4">
+                        <p class="text-[10px] text-slate-300"><i class="fas fa-gavel text-green-500 mr-3"></i><strong>Normas:</strong> Ley 29733 (LPDP) y Prevención Ley 30424.</p>
+                        <p class="text-[10px] text-slate-300"><i class="fas fa-university text-green-500 mr-3"></i><strong>Banca/Fintech:</strong> Alineación con Res. SBS 504-2021.</p>
+                        <div class="pt-4 border-t border-white/5 flex justify-between items-center">
+                            <span class="text-[8px] font-black uppercase text-slate-500 tracking-widest italic">Norma: NTP-ISO/IEC 27001</span>
+                        </div>
+                    </div>
+                </div>
 
-    <div class="service-card glass p-8 rounded-3xl border-t-4 border-t-cyan-500 transition-all duration-500">
-        <div class="flex justify-between items-start mb-4">
-            <span class="text-[9px] text-cyan-400 font-black uppercase tracking-[0.2em]">Offensive Security Lab</span>
-            <i class="fas fa-user-secret text-cyan-600 opacity-50"></i>
+            </div>
         </div>
-        <h4 class="text-xl font-bold text-white mb-3">Academia Antifraude</h4>
-        <p class="text-slate-400 mb-6 text-[12px] leading-relaxed">Entrenamos a tu equipo mediante ataques simulados. Blindamos el eslabón más débil de la cadena: el factor humano.</p>
-        <div class="space-y-4 bg-slate-950/50 p-4 rounded-2xl border border-white/5">
-            <p class="text-[10px] text-slate-300"><i class="fas fa-vial text-cyan-500 mr-2"></i><strong>Simulacro:</strong> Campañas controladas de Phishing, Smishing y Vishing con reporte de vulnerabilidad humana.</p>
-            <p class="text-[10px] text-slate-300"><i class="fas fa-graduation-cap text-cyan-500 mr-2"></i><strong>Certificación:</strong> Capacitación técnica en higiene digital y respuesta ante estafas electrónicas.</p>
-            <p class="text-[10px] text-slate-500 uppercase font-black tracking-tighter">Estándar: NIST SP 800-50</p>
-        </div>
-    </div>
+    </section>
 
-    <div class="service-card glass p-8 rounded-3xl border-t-4 border-t-purple-500 transition-all duration-500">
-        <div class="flex justify-between items-start mb-4">
-            <span class="text-[9px] text-purple-400 font-black uppercase tracking-[0.2em]">Infrastructure Hardening</span>
-            <i class="fas fa-shield-virus text-purple-600 opacity-50"></i>
+    <section id="pruebas" class="py-32 px-8 bg-black/40 border-y border-white/5">
+        <div class="max-w-4xl mx-auto text-center">
+            <h3 class="text-3xl font-black text-white mb-6 uppercase tracking-tighter">Vanguard Scan Lab</h3>
+            <p class="text-slate-500 mb-12 text-[10px] uppercase tracking-[0.4em] font-extrabold italic">Pruebas de Resiliencia en Tiempo Real</p>
+            <div class="glass-panel p-3 rounded-sm flex flex-col md:flex-row gap-4 shadow-2xl">
+                <input type="text" id="targetUrl" placeholder="EJ: HTTPS://SISTEMA-CRITICO.PE" 
+                    class="flex-1 bg-transparent border-none p-4 outline-none text-blue-400 font-mono text-xs uppercase tracking-widest">
+                <button id="scanBtn" class="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 font-extrabold uppercase tracking-widest text-[9px] transition-all">
+                    Iniciar Análisis Técnico
+                </button>
+            </div>
+            <div id="resultsArea" class="hidden mt-12 grid md:grid-cols-2 gap-8 text-left animate-fade-in">
+                <div class="tech-badge p-8 rounded-sm border-l-4 border-l-blue-600" id="secMetrics"></div>
+                <div class="tech-badge p-8 rounded-sm border-l-4 border-l-cyan-600" id="qaMetrics"></div>
+            </div>
         </div>
-        <h4 class="text-xl font-bold text-white mb-3">Chequeo Médico de Redes</h4>
-        <p class="text-slate-400 mb-6 text-[12px] leading-relaxed">Auditoría técnica de perímetros. Identificamos puertas abiertas antes que un atacante externo o interno las explote.</p>
-        <div class="space-y-4 bg-slate-950/50 p-4 rounded-2xl border border-white/5">
-            <p class="text-[10px] text-slate-300"><i class="fas fa-search text-purple-500 mr-2"></i><strong>Diagnóstico:</strong> Escaneo de puertos, Pentesting de red Wi-Fi y auditoría de permisos en Directorio Activo.</p>
-            <p class="text-[10px] text-slate-300"><i class="fas fa-lock text-purple-500 mr-2"></i><strong>Remediación:</strong> Hardening de servidores y configuración de firewalls para teletrabajo seguro (VPN).</p>
-            <p class="text-[10px] text-slate-500 uppercase font-black tracking-tighter">Estándar: OSSTMM & OWASP</p>
+    </section>
+
+    <footer id="contacto" class="py-32 px-8 text-center bg-[#020617] relative">
+        <div class="max-w-4xl mx-auto">
+            <h4 class="text-4xl font-black text-white mb-6 uppercase tracking-widest">ESTABLECE COMUNICACIÓN</h4>
+            <p class="text-slate-500 text-[10px] mb-12 uppercase tracking-[0.6em] font-extrabold">Lima, Perú | Ingeniería de Élite 24/7</p>
+            <div class="flex justify-center gap-8">
+                <a href="https://wa.me/51999228348" target="_blank" class="bg-white text-black px-16 py-6 font-black uppercase tracking-[0.4em] text-[10px] hover:bg-blue-600 hover:text-white transition-all shadow-2xl">
+                    Abrir Canal de Consulta
+                </a>
+            </div>
+            <p class="mt-32 text-[8px] text-slate-700 uppercase tracking-[1.5em] font-black">
+                &copy; 2026 MRA VANGUARD | SECURE ENGINEERING UNIT | PERÚ
+            </p>
         </div>
-    </div>
-</div>
+    </footer>
+
+    <script>
+        // Efecto dinámico en Navbar
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('glass-panel', 'py-4');
+                nav.classList.remove('py-6');
+            } else {
+                nav.classList.remove('glass-panel', 'py-4');
+                nav.classList.add('py-6');
+            }
+        });
+
+        // Simulación Técnica de Scan Lab
+        const scanBtn = document.getElementById('scanBtn');
+        const resultsArea = document.getElementById('resultsArea');
+
+        scanBtn.addEventListener('click', () => {
+            const urlInput = document.getElementById('targetUrl').value;
+            if(!urlInput) return alert("Ingrese un punto de enlace válido.");
+            
+            scanBtn.innerText = "SINCRONIZANDO NODOS DE AUDITORÍA...";
+            scanBtn.disabled = true;
+
+            setTimeout(() => {
+                scanBtn.innerText = "INICIAR ANÁLISIS TÉCNICO";
+                scanBtn.disabled = false;
+                resultsArea.classList.remove('hidden');
+                
+                document.getElementById('secMetrics').innerHTML = `
+                    <h5 class="text-[10px] font-black text-blue-500 uppercase mb-6 tracking-widest">Compliance & Cyber-Security</h5>
+                    <div class="space-y-4">
+                        <div class="flex justify-between text-[10px] border-b border-white/5 pb-2">
+                            <span class="text-slate-500 font-bold uppercase">Estado Ley 29733</span>
+                            <span class="text-blue-400 font-black">EN AUDITORÍA</span>
+                        </div>
+                        <div class="flex justify-between text-[10px] border-b border-white/5 pb-2">
+                            <span class="text-slate-500 font-bold uppercase">Certificación SSL</span>
+                            <span class="text-green-500 font-black">ACTIVO</span>
+                        </div>
+                        <div class="flex justify-between text-[10px]">
+                            <span class="text-slate-500 font-bold uppercase">Fuga de Datos</span>
+                            <span class="text-red-500 font-black">RIESGO BAJO</span>
+                        </div>
+                    </div>
+                `;
+                document.getElementById('qaMetrics').innerHTML = `
+                    <h5 class="text-[10px] font-black text-cyan-500 uppercase mb-6 tracking-widest">QA & Resiliencia de Sistemas</h5>
+                    <div class="space-y-4">
+                        <div class="flex justify-between text-[10px] border-b border-white/5 pb-2">
+                            <span class="text-slate-500 font-bold uppercase">Latencia API SUNAT</span>
+                            <span class="text-cyan-400 font-black">180ms</span>
+                        </div>
+                        <div class="flex justify-between text-[10px] border-b border-white/5 pb-2">
+                            <span class="text-slate-500 font-bold uppercase">Uptime Detectado</span>
+                            <span class="text-green-500 font-black">99.8%</span>
+                        </div>
+                        <div class="flex justify-between text-[10px]">
+                            <span class="text-slate-500 font-bold uppercase">Refactorización</span>
+                            <span class="text-yellow-500 font-black">SUGERIDA</span>
+                        </div>
+                    </div>
+                `;
+                resultsArea.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 2500);
+        });
+    </script>
+</body>
+</html>
