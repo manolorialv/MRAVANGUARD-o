@@ -3,23 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="MRA Vanguard - Ciberseguridad de grado militar en Lima, Perú. Protección avanzada, rescate de sistemas legacy, cumplimiento normativo y resiliencia digital para empresas peruanas.">
-    <meta name="keywords" content="ciberseguridad lima, pentesting peru, cumplimiento LPDP, ISO 27001, seguridad en la nube, SOC lima, rescate legacy systems">
-    <title>MRA Vanguard | Ciberseguridad de Grado Militar en Lima</title>
+    <meta name="description" content="MRA Vanguard - Consultoría especializada en ciberseguridad en Lima. Modernización de sistemas legacy, pentesting, cumplimiento LPDP, monitoreo 24/7 y más.">
+    <meta name="keywords" content="ciberseguridad lima, consultoría ciberseguridad peru, pentesting lima, LPDP, ISO 27001, sistemas legacy, SOC lima">
+    <title>MRA Vanguard | Consultoría de Ciberseguridad en Lima</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
-        
-        :root {
-            --primary: #00d4ff;
-        }
-        
-        * {
-            transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
-            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-            transition-duration: 150ms;
-        }
         
         .tail-container * {
             font-family: 'Inter', system_ui, sans-serif;
@@ -30,7 +20,7 @@
         }
 
         .hero-bg {
-            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+            background: linear-gradient(135deg, #0f172a 0%, #1e2937 100%);
         }
         
         .nav-link {
@@ -44,7 +34,7 @@
             height: 2px;
             bottom: -2px;
             left: 0;
-            background-color: #00d4ff;
+            background-color: #22d3ee;
         }
         
         .nav-link:hover:after {
@@ -57,75 +47,66 @@
         
         .service-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 25px 50px -12px rgb(0 212 255 / 0.15);
-        }
-        
-        .section-header {
-            position: relative;
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
         }
         
         .section-header:after {
             content: '';
             position: absolute;
-            width: 64px;
+            width: 60px;
             height: 3px;
-            background: linear-gradient(to right, #00d4ff, #0099cc);
+            background: linear-gradient(to right, #22d3ee, #06b6d4);
             bottom: -8px;
             left: 0;
         }
     </style>
 </head>
-<body class="tail-container">
+<body class="tail-container bg-white">
     <!-- NAVBAR -->
-    <nav class="bg-black border-b border-white/10 sticky top-0 z-50">
+    <nav class="bg-white border-b sticky top-0 z-50 shadow-sm">
         <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
-            <!-- Logo -->
             <div class="flex items-center gap-x-3">
-                <div class="w-10 h-10 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-inner">
+                <div class="w-10 h-10 bg-gradient-to-br from-cyan-500 to-sky-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold">
                     V
                 </div>
                 <div>
-                    <span class="text-2xl font-semibold tracking-tighter heading-font text-white">MRA VANGUARD</span>
+                    <span class="text-2xl font-semibold tracking-tighter heading-font text-slate-900">MRA VANGUARD</span>
                 </div>
-                <span class="px-3 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-400/30">LIMA • PERÚ</span>
+                <span class="px-3 py-1 text-xs font-medium bg-cyan-100 text-cyan-700 rounded-full">LIMA • PERÚ</span>
             </div>
 
-            <!-- Menú -->
-            <div class="hidden md:flex items-center gap-x-10 text-white/90 font-medium">
-                <a href="#inicio" class="nav-link text-sm uppercase tracking-widest hover:text-white">Inicio</a>
-                <a href="#servicios" class="nav-link text-sm uppercase tracking-widest hover:text-white">Servicios</a>
-                <a href="#nosotros" class="nav-link text-sm uppercase tracking-widest hover:text-white">Nosotros</a>
-                <a href="#por-que-nosotros" class="nav-link text-sm uppercase tracking-widest hover:text-white">Por qué nosotros</a>
-                <a href="#contacto" class="nav-link text-sm uppercase tracking-widest hover:text-white">Contacto</a>
+            <div class="hidden md:flex items-center gap-x-10 text-slate-700 font-medium">
+                <a href="#inicio" class="nav-link text-sm uppercase tracking-widest hover:text-slate-900">Inicio</a>
+                <a href="#servicios" class="nav-link text-sm uppercase tracking-widest hover:text-slate-900">Servicios</a>
+                <a href="#nosotros" class="nav-link text-sm uppercase tracking-widest hover:text-slate-900">Nosotros</a>
+                <a href="#contacto" class="nav-link text-sm uppercase tracking-widest hover:text-slate-900">Contacto</a>
             </div>
 
             <div class="flex items-center gap-x-4">
-                <a href="https://wa.me/51987654321" target="_blank"
-                   class="flex items-center gap-x-2 bg-white text-black hover:bg-cyan-400 hover:text-white px-6 py-3 rounded-2xl font-semibold text-sm">
+                <a href="https://wa.me/51912345678" target="_blank"
+                   class="flex items-center gap-x-2 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-2xl font-semibold text-sm">
                     <i class="fab fa-whatsapp text-lg"></i>
                     <span>WhatsApp</span>
                 </a>
                 
                 <button onclick="document.getElementById('contacto').scrollIntoView({ behavior: 'smooth' })"
-                        class="bg-transparent border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black px-8 py-3 rounded-2xl font-semibold text-sm">
-                    INICIAR ANÁLISIS GRATUITO
+                        class="bg-slate-900 hover:bg-slate-800 text-white px-8 py-3 rounded-2xl font-semibold text-sm">
+                    SOLICITAR ANÁLISIS GRATUITO
                 </button>
                 
-                <!-- Mobile menu button -->
-                <button id="mobile-menu-button" class="md:hidden text-white text-3xl">
+                <button id="mobile-menu-button" class="md:hidden text-slate-700 text-3xl">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
         </div>
         
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-black border-t border-white/10 px-6 py-6">
-            <div class="flex flex-col gap-y-6 text-white font-medium text-lg">
-                <a href="#inicio" onclick="toggleMobileMenu()" class="hover:text-cyan-400">Inicio</a>
-                <a href="#servicios" onclick="toggleMobileMenu()" class="hover:text-cyan-400">Servicios</a>
-                <a href="#nosotros" onclick="toggleMobileMenu()" class="hover:text-cyan-400">Nosotros</a>
-                <a href="#por-que-nosotros" onclick="toggleMobileMenu()" class="hover:text-cyan-400">Por qué nosotros</a>
-                <a href="#contacto" onclick="toggleMobileMenu()" class="hover:text-cyan-400">Contacto</a>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t px-6 py-6">
+            <div class="flex flex-col gap-y-6 text-slate-700 font-medium text-lg">
+                <a href="#inicio" onclick="toggleMobileMenu()" class="hover:text-cyan-600">Inicio</a>
+                <a href="#servicios" onclick="toggleMobileMenu()" class="hover:text-cyan-600">Servicios</a>
+                <a href="#nosotros" onclick="toggleMobileMenu()" class="hover:text-cyan-600">Nosotros</a>
+                <a href="#contacto" onclick="toggleMobileMenu()" class="hover:text-cyan-600">Contacto</a>
             </div>
         </div>
     </nav>
@@ -134,92 +115,60 @@
     <header id="inicio" class="hero-bg text-white min-h-screen flex items-center">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center pt-20">
             <div class="space-y-8">
-                <div class="inline-flex items-center gap-x-2 bg-white/10 text-cyan-400 text-sm font-medium px-5 py-2 rounded-3xl border border-white/20">
-                    <div class="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
-                    SEGURIDAD DE GRADO MILITAR • LIMA, PERÚ
+                <div class="inline-flex items-center gap-x-2 bg-white/10 text-cyan-300 text-sm font-medium px-5 py-2 rounded-3xl border border-white/20">
+                    CONSULTORÍA ESPECIALIZADA EN CIBERSEGURIDAD • LIMA
                 </div>
                 
-                <h1 class="text-6xl md:text-7xl font-bold leading-none tracking-tighter heading-font">
-                    Tu empresa merece<br>una ciberdefensa<br>que no se rompe.
+                <h1 class="text-6xl md:text-7xl font-bold leading-none tracking-tighter heading-font text-white">
+                    Protegemos lo que más<br>importa a tu empresa.
                 </h1>
                 
                 <p class="text-xl text-white/80 max-w-md">
-                    Ingeniería táctica en ciberseguridad. Rescatamos sistemas legacy, blindamos tu cumplimiento normativo y construimos resiliencia digital que resiste cualquier amenaza.
+                    Consultoría profesional en ciberseguridad en Lima. Modernizamos sistemas legacy, garantizamos cumplimiento normativo y construimos una protección digital sólida y confiable para empresas peruanas.
                 </p>
                 
                 <div class="flex flex-wrap gap-4">
                     <button onclick="document.getElementById('contacto').scrollIntoView({ behavior: 'smooth' })"
-                            class="bg-cyan-400 hover:bg-cyan-300 text-black font-semibold text-lg px-10 py-6 rounded-3xl flex items-center gap-x-3">
-                        <span>INICIAR ANÁLISIS GRATUITO</span>
+                            class="bg-cyan-500 hover:bg-cyan-400 text-slate-900 font-semibold text-lg px-10 py-6 rounded-3xl flex items-center gap-x-3">
+                        <span>SOLICITAR ANÁLISIS GRATUITO</span>
                         <i class="fas fa-arrow-right"></i>
                     </button>
                     
                     <a href="#servicios"
                        class="border border-white/60 hover:border-white text-white font-semibold text-lg px-10 py-6 rounded-3xl flex items-center gap-x-3">
                         Ver todos los servicios
-                        <i class="fas fa-shield-halved"></i>
                     </a>
                 </div>
                 
-                <div class="flex items-center gap-x-12 text-sm">
-                    <div class="flex items-center gap-x-3">
-                        <i class="fas fa-check-circle text-2xl text-cyan-400"></i>
-                        <div>
-                            <div class="font-medium">Certificados</div>
-                            <div class="text-white/60">ISO 27001 • LPDP • SBS</div>
-                        </div>
+                <div class="flex items-center gap-x-10 text-sm">
+                    <div>
+                        <div class="font-medium">Cumplimiento</div>
+                        <div class="text-white/70">LPDP • SBS • ISO 27001</div>
                     </div>
-                    <div class="flex items-center gap-x-3">
-                        <i class="fas fa-clock text-2xl text-cyan-400"></i>
-                        <div>
-                            <div class="font-medium">Respuesta 24/7</div>
-                            <div class="text-white/60">SOC en Lima</div>
-                        </div>
+                    <div>
+                        <div class="font-medium">Soporte local</div>
+                        <div class="text-white/70">Equipo en Lima</div>
                     </div>
-                    <div class="flex items-center gap-x-3">
-                        <i class="fas fa-map-marker-alt text-2xl text-cyan-400"></i>
-                        <div>
-                            <div class="font-medium">Basados en Lima</div>
-                            <div class="text-white/60">Conocemos tu realidad</div>
-                        </div>
+                    <div>
+                        <div class="font-medium">Enfoque práctico</div>
+                        <div class="text-white/70">Soluciones reales para tu negocio</div>
                     </div>
                 </div>
             </div>
             
-            <!-- Visual hero -->
-            <div class="hidden md:flex justify-center relative">
-                <div class="relative">
-                    <div class="absolute inset-0 bg-gradient-to-br from-cyan-400/20 to-transparent rounded-[4rem] -rotate-6 scale-95"></div>
-                    <div class="bg-black/90 border border-cyan-400/30 rounded-3xl p-8 shadow-2xl backdrop-blur-xl">
-                        <div class="text-center mb-6">
-                            <div class="inline-flex items-center gap-x-2 text-cyan-400 text-sm font-mono bg-black px-4 py-2 rounded-2xl">
-                                <i class="fas fa-shield-halved"></i>
-                                THREAT LEVEL: LOW
-                            </div>
+            <div class="hidden md:flex justify-center">
+                <div class="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-8 max-w-xs w-full">
+                    <div class="text-center mb-6">
+                        <div class="inline-block bg-emerald-400/20 text-emerald-300 text-xs font-medium px-4 py-2 rounded-2xl">
+                            Tu seguridad, nuestra prioridad
                         </div>
-                        <div class="grid grid-cols-3 gap-4 text-center">
-                            <div class="bg-white/5 rounded-2xl p-4">
-                                <div class="text-4xl font-bold text-cyan-400">99.98%</div>
-                                <div class="text-xs text-white/60 tracking-widest">UPTIME PROTEGIDO</div>
-                            </div>
-                            <div class="bg-white/5 rounded-2xl p-4">
-                                <div class="text-4xl font-bold text-emerald-400">0</div>
-                                <div class="text-xs text-white/60 tracking-widest">BRECHAS EN 2025</div>
-                            </div>
-                            <div class="bg-white/5 rounded-2xl p-4">
-                                <div class="text-4xl font-bold text-amber-400">47</div>
-                                <div class="text-xs text-white/60 tracking-widest">VULNERABILIDADES BLOQUEADAS</div>
-                            </div>
-                        </div>
-                        <div class="mt-8 text-center text-xs font-mono text-white/40">MRA VANGUARD • SECURE ENGINEERING UNIT</div>
+                    </div>
+                    <div class="space-y-6 text-center">
+                        <div class="text-5xl font-semibold text-cyan-300">98%</div>
+                        <div class="text-sm text-white/70">de nuestros clientes mejoran su postura de seguridad en los primeros 3 meses</div>
                     </div>
                 </div>
             </div>
-        </div>
-        
-        <div class="absolute bottom-10 left-1/2 flex flex-col items-center text-white/60 text-xs tracking-widest">
-            <div>DESPLAZA PARA EXPLORAR</div>
-            <i class="fas fa-chevron-down animate-bounce mt-2"></i>
         </div>
     </header>
 
@@ -227,383 +176,364 @@
     <section id="servicios" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16">
-                <span class="px-6 py-2 bg-cyan-100 text-cyan-700 text-sm font-semibold rounded-3xl">PORTAFOLIO DE INGENIERÍA TÁCTICA</span>
-                <h2 class="text-5xl font-bold heading-font mt-4">Servicios de ciberseguridad profesional</h2>
-                <p class="text-xl text-gray-600 mt-4 max-w-2xl mx-auto">
-                    No solo parches. Construimos sistemas que no se rompen. Especializados en el mercado peruano.
+                <span class="px-6 py-2 bg-cyan-100 text-cyan-700 text-sm font-semibold rounded-3xl">NUESTROS SERVICIOS</span>
+                <h2 class="text-5xl font-bold heading-font mt-4 text-slate-900">Soluciones prácticas de ciberseguridad para tu empresa en Perú</h2>
+                <p class="text-xl text-slate-600 mt-4 max-w-2xl mx-auto">
+                    Te ayudamos a proteger tu información, cumplir con las regulaciones locales y modernizar tus sistemas de forma segura y sin interrupciones.
                 </p>
             </div>
             
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Servicio 1 -->
-                <div class="service-card bg-white border border-gray-200 rounded-3xl p-8 hover:border-cyan-400 group">
+                
+                <!-- 1 -->
+                <div class="service-card bg-white border border-slate-200 rounded-3xl p-8 hover:border-cyan-400">
                     <div class="w-14 h-14 bg-gradient-to-br from-amber-400 to-orange-500 rounded-2xl flex items-center justify-center text-white text-3xl mb-8">
                         <i class="fas fa-history"></i>
                     </div>
-                    <h3 class="text-2xl font-semibold mb-3">Rescate y Modernización de Sistemas Legacy</h3>
-                    <p class="text-gray-600 mb-6">
-                        Recuperamos y blindamos sistemas críticos obsoletos (FoxPro, Visual Basic 6, SQL Server legacy, Cobol) con migración segura a arquitecturas modernas y cloud. 
-                        Eliminamos riesgos de seguridad inherentes a tecnología antigua sin interrumpir tu operación.
+                    <h3 class="text-2xl font-semibold mb-3">Modernización Segura de Sistemas Legacy</h3>
+                    <p class="text-slate-600 mb-6">
+                        Actualizamos y protegemos sistemas obsoletos (FoxPro, Visual Basic 6, bases de datos antiguas o aplicaciones personalizadas) migrándolos a tecnologías modernas y entornos seguros en la nube. 
+                        Reducimos riesgos de vulnerabilidades sin detener tus operaciones diarias.
                     </p>
                     <div class="flex flex-wrap gap-2 text-xs">
-                        <span class="bg-gray-100 text-gray-700 px-4 py-2 rounded-3xl">FoxPro • VB6 • SQL 2000-2022</span>
-                        <span class="bg-gray-100 text-gray-700 px-4 py-2 rounded-3xl">Migración Cloud</span>
-                        <span class="bg-gray-100 text-gray-700 px-4 py-2 rounded-3xl">ISO/IEC 25010</span>
-                    </div>
-                    <div class="mt-8 text-cyan-500 font-medium flex items-center gap-x-2 group-hover:gap-x-3">
-                        Ver caso de éxito <i class="fas fa-arrow-right"></i>
+                        <span class="bg-slate-100 text-slate-700 px-4 py-2 rounded-3xl">FoxPro • VB6 • SQL Legacy</span>
+                        <span class="bg-slate-100 text-slate-700 px-4 py-2 rounded-3xl">Migración Segura a Cloud</span>
+                        <span class="bg-slate-100 text-slate-700 px-4 py-2 rounded-3xl">Continuidad Operativa</span>
                     </div>
                 </div>
                 
-                <!-- Servicio 2 -->
-                <div class="service-card bg-white border border-gray-200 rounded-3xl p-8 hover:border-cyan-400 group">
+                <!-- 2 -->
+                <div class="service-card bg-white border border-slate-200 rounded-3xl p-8 hover:border-cyan-400">
                     <div class="w-14 h-14 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-2xl flex items-center justify-center text-white text-3xl mb-8">
                         <i class="fas fa-eye"></i>
                     </div>
-                    <h3 class="text-2xl font-semibold mb-3">Vigilancia 24/7 y Automatización QA</h3>
-                    <p class="text-gray-600 mb-6">
-                        Monitoreo proactivo de pasarelas de pago (Niubiz, Culqi, Izipay), flujos SUNAT y APIs críticas con bots Python/Selenium y alertas instantáneas. 
-                        Prevenimos caídas transaccionales y fraudes antes de que afecten tu negocio.
+                    <h3 class="text-2xl font-semibold mb-3">Monitoreo y Automatización de Procesos Críticos</h3>
+                    <p class="text-slate-600 mb-6">
+                        Implementamos vigilancia continua de pasarelas de pago (Niubiz, Culqi, Izipay), integraciones con SUNAT y flujos clave de negocio mediante herramientas automatizadas. 
+                        Detectamos fallos o intentos de fraude antes de que impacten tus ventas o reputación.
                     </p>
                     <div class="flex flex-wrap gap-2 text-xs">
-                        <span class="bg-gray-100 text-gray-700 px-4 py-2 rounded-3xl">Python • Selenium</span>
-                        <span class="bg-gray-100 text-gray-700 px-4 py-2 rounded-3xl">ISTQB Excellence</span>
-                        <span class="bg-gray-100 text-gray-700 px-4 py-2 rounded-3xl">Uptime 99.98%</span>
-                    </div>
-                    <div class="mt-8 text-cyan-500 font-medium flex items-center gap-x-2 group-hover:gap-x-3">
-                        Ver demo en vivo <i class="fas fa-arrow-right"></i>
+                        <span class="bg-slate-100 text-slate-700 px-4 py-2 rounded-3xl">Python • Automatización</span>
+                        <span class="bg-slate-100 text-slate-700 px-4 py-2 rounded-3xl">Pasarelas de Pago • SUNAT</span>
+                        <span class="bg-slate-100 text-slate-700 px-4 py-2 rounded-3xl">Alertas en Tiempo Real</span>
                     </div>
                 </div>
                 
-                <!-- Servicio 3 -->
-                <div class="service-card bg-white border border-gray-200 rounded-3xl p-8 hover:border-cyan-400 group">
+                <!-- 3 -->
+                <div class="service-card bg-white border border-slate-200 rounded-3xl p-8 hover:border-cyan-400">
                     <div class="w-14 h-14 bg-gradient-to-br from-purple-400 to-violet-500 rounded-2xl flex items-center justify-center text-white text-3xl mb-8">
                         <i class="fas fa-gavel"></i>
                     </div>
-                    <h3 class="text-2xl font-semibold mb-3">Escudo Normativo y Protección de Datos</h3>
-                    <p class="text-gray-600 mb-6">
-                        Cumplimiento integral con Ley 29733 (LPDP), Res. SBS 504-2021, ANPD y Ley 30424. 
-                        Auditorías técnicas, implementación de controles y blindaje legal que elimina multas y riesgos regulatorios.
+                    <h3 class="text-2xl font-semibold mb-3">Cumplimiento Normativo y Protección de Datos</h3>
+                    <p class="text-slate-600 mb-6">
+                        Te acompañamos en el cumplimiento integral de la Ley de Protección de Datos Personales (LPDP), regulaciones SBS, ANPD y otras normas aplicables. 
+                        Implementamos controles técnicos y documentales para evitar multas y fortalecer la confianza de tus clientes.
                     </p>
                     <div class="flex flex-wrap gap-2 text-xs">
-                        <span class="bg-gray-100 text-gray-700 px-4 py-2 rounded-3xl">LPDP • SBS • ANPD</span>
-                        <span class="bg-gray-100 text-gray-700 px-4 py-2 rounded-3xl">ISO 27001</span>
-                        <span class="bg-gray-100 text-gray-700 px-4 py-2 rounded-3xl">Prevención multas</span>
-                    </div>
-                    <div class="mt-8 text-cyan-500 font-medium flex items-center gap-x-2 group-hover:gap-x-3">
-                        Descargar checklist <i class="fas fa-arrow-right"></i>
+                        <span class="bg-slate-100 text-slate-700 px-4 py-2 rounded-3xl">LPDP • SBS • ANPD</span>
+                        <span class="bg-slate-100 text-slate-700 px-4 py-2 rounded-3xl">ISO 27001</span>
+                        <span class="bg-slate-100 text-slate-700 px-4 py-2 rounded-3xl">Auditorías y Controles</span>
                     </div>
                 </div>
                 
-                <!-- Nuevo Servicio 4 - Pentesting -->
-                <div class="service-card bg-white border border-gray-200 rounded-3xl p-8 hover:border-cyan-400 group">
+                <!-- 4 -->
+                <div class="service-card bg-white border border-slate-200 rounded-3xl p-8 hover:border-cyan-400">
                     <div class="w-14 h-14 bg-gradient-to-br from-red-400 to-rose-500 rounded-2xl flex items-center justify-center text-white text-3xl mb-8">
                         <i class="fas fa-bug"></i>
                     </div>
                     <h3 class="text-2xl font-semibold mb-3">Pruebas de Penetración (Pentesting)</h3>
-                    <p class="text-gray-600 mb-6">
-                        Simulamos ataques reales de hackers éticos a tus aplicaciones web, móviles, redes y APIs. 
-                        Reporte ejecutivo + técnico detallado con recomendaciones accionables. 
-                        Cumplimos estándares OWASP, PTES y CREST.
+                    <p class="text-slate-600 mb-6">
+                        Realizamos pruebas éticas controladas en aplicaciones web, móviles, APIs, redes y sistemas internos. 
+                        Entregamos reportes claros, priorizados y con recomendaciones prácticas para cerrar brechas de seguridad reales.
                     </p>
                     <div class="flex flex-wrap gap-2 text-xs">
-                        <span class="bg-gray-100 text-gray-700 px-4 py-2 rounded-3xl">OWASP Top 10</span>
-                        <span class="bg-gray-100 text-gray-700 px-4 py-2 rounded-3xl">API • Web • Mobile</span>
-                        <span class="bg-gray-100 text-gray-700 px-4 py-2 rounded-3xl">Reporte en 48h</span>
-                    </div>
-                    <div class="mt-8 text-cyan-500 font-medium flex items-center gap-x-2 group-hover:gap-x-3">
-                        Solicitar pentest <i class="fas fa-arrow-right"></i>
+                        <span class="bg-slate-100 text-slate-700 px-4 py-2 rounded-3xl">OWASP Top 10</span>
+                        <span class="bg-slate-100 text-slate-700 px-4 py-2 rounded-3xl">Web • Mobile • API • Redes</span>
+                        <span class="bg-slate-100 text-slate-700 px-4 py-2 rounded-3xl">Reporte Ejecutivo + Técnico</span>
                     </div>
                 </div>
                 
-                <!-- Nuevo Servicio 5 - SOC -->
-                <div class="service-card bg-white border border-gray-200 rounded-3xl p-8 hover:border-cyan-400 group">
+                <!-- 5 -->
+                <div class="service-card bg-white border border-slate-200 rounded-3xl p-8 hover:border-cyan-400">
                     <div class="w-14 h-14 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-2xl flex items-center justify-center text-white text-3xl mb-8">
                         <i class="fas fa-headset"></i>
                     </div>
-                    <h3 class="text-2xl font-semibold mb-3">Centro de Operaciones de Seguridad (SOC) 24/7</h3>
-                    <p class="text-gray-600 mb-6">
-                        Monitoreo continuo con IA y equipo certificado en Lima. Detección, contención y respuesta a incidentes en minutos. 
-                        Incluye Threat Intelligence local y global adaptada al contexto peruano.
+                    <h3 class="text-2xl font-semibold mb-3">Monitoreo Continuo y Respuesta a Incidentes (SOC)</h3>
+                    <p class="text-slate-600 mb-6">
+                        Servicio de vigilancia 24/7 con equipo local en Lima. Detectamos amenazas en tiempo real y respondemos rápidamente para minimizar cualquier impacto en tu operación.
                     </p>
                     <div class="flex flex-wrap gap-2 text-xs">
-                        <span class="bg-gray-100 text-gray-700 px-4 py-2 rounded-3xl">SIEM • EDR • XDR</span>
-                        <span class="bg-gray-100 text-gray-700 px-4 py-2 rounded-3xl">Respuesta < 15 min</span>
-                        <span class="bg-gray-100 text-gray-700 px-4 py-2 rounded-3xl">Equipo local</span>
-                    </div>
-                    <div class="mt-8 text-cyan-500 font-medium flex items-center gap-x-2 group-hover:gap-x-3">
-                        Ver SOC en acción <i class="fas fa-arrow-right"></i>
+                        <span class="bg-slate-100 text-slate-700 px-4 py-2 rounded-3xl">Detección y Respuesta</span>
+                        <span class="bg-slate-100 text-slate-700 px-4 py-2 rounded-3xl">Equipo en Perú</span>
+                        <span class="bg-slate-100 text-slate-700 px-4 py-2 rounded-3xl">Soporte Rápido</span>
                     </div>
                 </div>
                 
-                <!-- Nuevo Servicio 6 - Cloud & DevSecOps -->
-                <div class="service-card bg-white border border-gray-200 rounded-3xl p-8 hover:border-cyan-400 group">
+                <!-- 6 -->
+                <div class="service-card bg-white border border-slate-200 rounded-3xl p-8 hover:border-cyan-400">
                     <div class="w-14 h-14 bg-gradient-to-br from-sky-400 to-cyan-500 rounded-2xl flex items-center justify-center text-white text-3xl mb-8">
                         <i class="fas fa-cloud"></i>
                     </div>
                     <h3 class="text-2xl font-semibold mb-3">Seguridad en la Nube y DevSecOps</h3>
-                    <p class="text-gray-600 mb-6">
-                        Implementación Zero Trust en AWS, Azure y Google Cloud. Pipelines CI/CD seguros, contenedores blindados y auditorías continuas. 
-                        Migración segura desde on-premise con mínima exposición.
+                    <p class="text-slate-600 mb-6">
+                        Implementamos controles de seguridad en AWS, Azure y Google Cloud. Integramos seguridad desde el desarrollo (DevSecOps) para que tus proyectos en la nube sean seguros por diseño y cumplan con las mejores prácticas.
                     </p>
                     <div class="flex flex-wrap gap-2 text-xs">
-                        <span class="bg-gray-100 text-gray-700 px-4 py-2 rounded-3xl">AWS • Azure • GCP</span>
-                        <span class="bg-gray-100 text-gray-700 px-4 py-2 rounded-3xl">DevSecOps</span>
-                        <span class="bg-gray-100 text-gray-700 px-4 py-2 rounded-3xl">Zero Trust</span>
-                    </div>
-                    <div class="mt-8 text-cyan-500 font-medium flex items-center gap-x-2 group-hover:gap-x-3">
-                        Consultoría gratuita <i class="fas fa-arrow-right"></i>
+                        <span class="bg-slate-100 text-slate-700 px-4 py-2 rounded-3xl">AWS • Azure • GCP</span>
+                        <span class="bg-slate-100 text-slate-700 px-4 py-2 rounded-3xl">Zero Trust • DevSecOps</span>
                     </div>
                 </div>
+                
+                <!-- 7 Nuevo -->
+                <div class="service-card bg-white border border-slate-200 rounded-3xl p-8 hover:border-cyan-400">
+                    <div class="w-14 h-14 bg-gradient-to-br from-violet-400 to-purple-500 rounded-2xl flex items-center justify-center text-white text-3xl mb-8">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3">Capacitación y Concientización en Ciberseguridad</h3>
+                    <p class="text-slate-600 mb-6">
+                        Programas prácticos y personalizados para directivos y colaboradores. Reducimos el riesgo humano mediante talleres, simulacros de phishing y campañas de concientización continua.
+                    </p>
+                    <div class="flex flex-wrap gap-2 text-xs">
+                        <span class="bg-slate-100 text-slate-700 px-4 py-2 rounded-3xl">Talleres Presenciales y Virtuales</span>
+                        <span class="bg-slate-100 text-slate-700 px-4 py-2 rounded-3xl">Simulacros de Phishing</span>
+                        <span class="bg-slate-100 text-slate-700 px-4 py-2 rounded-3xl">Para Todo el Equipo</span>
+                    </div>
+                </div>
+                
+                <!-- 8 Nuevo -->
+                <div class="service-card bg-white border border-slate-200 rounded-3xl p-8 hover:border-cyan-400">
+                    <div class="w-14 h-14 bg-gradient-to-br from-rose-500 to-red-600 rounded-2xl flex items-center justify-center text-white text-3xl mb-8">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3">Gestión de Incidentes y Respuesta a Brechas</h3>
+                    <p class="text-slate-600 mb-6">
+                        Apoyo especializado cuando ocurre un incidente de seguridad. Contención rápida, investigación forense, recuperación de sistemas y elaboración de informes para autoridades y seguros.
+                    </p>
+                    <div class="flex flex-wrap gap-2 text-xs">
+                        <span class="bg-slate-100 text-slate-700 px-4 py-2 rounded-3xl">Respuesta Rápida</span>
+                        <span class="bg-slate-100 text-slate-700 px-4 py-2 rounded-3xl">Análisis Forense</span>
+                        <span class="bg-slate-100 text-slate-700 px-4 py-2 rounded-3xl">Recuperación Segura</span>
+                    </div>
+                </div>
+                
+                <!-- 9 Nuevo -->
+                <div class="service-card bg-white border border-slate-200 rounded-3xl p-8 hover:border-cyan-400">
+                    <div class="w-14 h-14 bg-gradient-to-br from-indigo-400 to-blue-600 rounded-2xl flex items-center justify-center text-white text-3xl mb-8">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3">CISO como Servicio (CISO-as-a-Service)</h3>
+                    <p class="text-slate-600 mb-6">
+                        Acceso a un Director de Seguridad de la Información experimentado por horas o meses. 
+                        Te ayudamos a definir estrategia, gobernanza, políticas y seguimiento sin necesidad de contratar un CISO a tiempo completo.
+                    </p>
+                    <div class="flex flex-wrap gap-2 text-xs">
+                        <span class="bg-slate-100 text-slate-700 px-4 py-2 rounded-3xl">Estrategia de Seguridad</span>
+                        <span class="bg-slate-100 text-slate-700 px-4 py-2 rounded-3xl">Gobernanza y Políticas</span>
+                        <span class="bg-slate-100 text-slate-700 px-4 py-2 rounded-3xl">Flexible y Económico</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-16">
+                <p class="text-slate-500 text-sm">¿No encuentras exactamente lo que necesitas? Contáctanos para una solución personalizada.</p>
             </div>
         </div>
     </section>
 
     <!-- NOSOTROS -->
-    <section id="nosotros" class="py-24 bg-gray-950 text-white">
+    <section id="nosotros" class="py-24 bg-slate-50">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid md:grid-cols-12 gap-16 items-center">
                 <div class="md:col-span-7">
-                    <span class="text-cyan-400 text-sm font-semibold">MRA VANGUARD ENGINEERING UNIT</span>
-                    <h2 class="text-5xl font-bold heading-font mt-3">Ingeniería de ciberseguridad con mentalidad militar</h2>
-                    <p class="mt-8 text-lg text-white/80 leading-relaxed">
-                        Nacidos en Lima, entendemos los desafíos reales de las empresas peruanas: regulaciones estrictas, infraestructura legacy y amenazas locales. 
-                        Combinamos estándares internacionales de ciberseguridad con conocimiento profundo del ecosistema peruano (SBS, SUNAT, ANPD).
+                    <h2 class="text-5xl font-bold heading-font text-slate-900">Una consultoría cercana y profesional</h2>
+                    <p class="mt-8 text-lg text-slate-600 leading-relaxed">
+                        MRA Vanguard nace en Lima con el propósito de ayudar a las empresas peruanas a proteger su información y operar con tranquilidad en un mundo cada vez más digital.
                     </p>
-                    <p class="mt-6 text-lg text-white/80 leading-relaxed">
-                        No vendemos software. Entregamos resiliencia. Nuestro equipo está formado por ex-oficiales de ciberdefensa, ingenieros certificados CISSP, OSCP y expertos en cumplimiento normativo peruano.
+                    <p class="mt-6 text-lg text-slate-600 leading-relaxed">
+                        Combinamos experiencia técnica actualizada con un profundo conocimiento de las regulaciones locales y los desafíos reales que enfrentan las organizaciones en Perú.
                     </p>
                     
                     <div class="mt-12 grid grid-cols-3 gap-8">
                         <div>
-                            <div class="text-6xl font-bold text-cyan-400">+12</div>
-                            <div class="text-white/70">Años protegiendo empresas críticas</div>
+                            <div class="text-5xl font-bold text-cyan-600">100%</div>
+                            <div class="text-slate-600 mt-2">Enfoque local</div>
                         </div>
                         <div>
-                            <div class="text-6xl font-bold text-cyan-400">47</div>
-                            <div class="text-white/70">Clientes en el sector financiero y retail</div>
+                            <div class="text-5xl font-bold text-cyan-600">+8</div>
+                            <div class="text-slate-600 mt-2">Años de experiencia combinada</div>
                         </div>
                         <div>
-                            <div class="text-6xl font-bold text-cyan-400">100%</div>
-                            <div class="text-white/70">Retención de clientes 2025</div>
+                            <div class="text-5xl font-bold text-cyan-600">24/7</div>
+                            <div class="text-slate-600 mt-2">Soporte cuando lo necesitas</div>
                         </div>
                     </div>
                 </div>
                 
-                <div class="md:col-span-5 bg-white/5 border border-white/10 rounded-3xl p-8">
-                    <blockquote class="italic text-xl text-white/80">
-                        “MRA Vanguard transformó nuestros sistemas legacy en una fortaleza digital. Cumplimos con la SBS en tiempo récord y ahora dormimos tranquilos.”
-                    </blockquote>
+                <div class="md:col-span-5 bg-white rounded-3xl p-10 shadow">
+                    <div class="italic text-slate-600">
+                        “Gracias a MRA Vanguard logramos modernizar nuestro sistema legacy y cumplir con todas las exigencias de la LPDP en poco tiempo. Muy recomendados.”
+                    </div>
                     <div class="mt-8 flex items-center gap-x-4">
-                        <div class="w-12 h-12 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-2xl"></div>
+                        <div class="w-12 h-12 bg-slate-200 rounded-2xl"></div>
                         <div>
-                            <div class="font-semibold">Ing. Carlos Mendoza</div>
-                            <div class="text-sm text-white/60">Director de Tecnología • Banco Regional</div>
+                            <div class="font-semibold text-slate-900">María Elena Torres</div>
+                            <div class="text-sm text-slate-500">Gerente de TI • Empresa Retail</div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- POR QUÉ NOSOTROS -->
-    <section id="por-que-nosotros" class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-5xl font-bold heading-font text-center mb-16">Por qué las empresas líderes eligen MRA Vanguard</h2>
-            
-            <div class="grid md:grid-cols-4 gap-8">
-                <div class="text-center">
-                    <i class="fas fa-shield-halved text-6xl text-cyan-400 mb-6"></i>
-                    <h4 class="font-semibold text-2xl mb-2">Enfoque militar</h4>
-                    <p class="text-gray-600">Metodologías probadas en entornos de alta criticidad. Pensamos como el atacante.</p>
-                </div>
-                <div class="text-center">
-                    <i class="fas fa-map-marker-alt text-6xl text-cyan-400 mb-6"></i>
-                    <h4 class="font-semibold text-2xl mb-2">100% local</h4>
-                    <p class="text-gray-600">Equipo y operaciones en Lima. Respuesta inmediata y conocimiento del marco legal peruano.</p>
-                </div>
-                <div class="text-center">
-                    <i class="fas fa-cogs text-6xl text-cyan-400 mb-6"></i>
-                    <h4 class="font-semibold text-2xl mb-2">Legacy + Moderno</h4>
-                    <p class="text-gray-600">Únicos en Perú que combinamos rescate de sistemas antiguos con ciberseguridad de última generación.</p>
-                </div>
-                <div class="text-center">
-                    <i class="fas fa-medal text-6xl text-cyan-400 mb-6"></i>
-                    <h4 class="font-semibold text-2xl mb-2">Resultados garantizados</h4>
-                    <p class="text-gray-600">Contrato con SLA de respuesta y KPIs claros. Si no cumplimos, ajustamos sin costo.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- CONTACTO -->
-    <section id="contacto" class="py-24 bg-gray-950 text-white">
+    <section id="contacto" class="py-24 bg-slate-900 text-white">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid md:grid-cols-12 gap-16">
                 <div class="md:col-span-5">
-                    <h2 class="text-5xl font-bold heading-font">Listo para fortificar tu empresa?</h2>
-                    <p class="text-xl mt-6 text-white/80">
-                        Agenda tu análisis técnico gratuito de 30 minutos. 
-                        Sin compromiso. Descubre exactamente dónde estás expuesto.
+                    <h2 class="text-5xl font-bold heading-font">¿Listo para fortalecer tu seguridad?</h2>
+                    <p class="text-xl mt-6 text-slate-300">
+                        Agenda una sesión de diagnóstico gratuita. Analizaremos tu situación actual y te daremos recomendaciones claras y accionables.
                     </p>
                     
                     <div class="mt-12 space-y-8">
                         <div class="flex gap-x-6">
                             <i class="fas fa-envelope text-3xl text-cyan-400 mt-1"></i>
                             <div>
-                                <div class="font-medium">Escríbenos</div>
+                                <div class="font-medium">Correo</div>
                                 <a href="mailto:contacto@mra-vanguard.pe" class="text-cyan-400 hover:underline">contacto@mra-vanguard.pe</a>
                             </div>
                         </div>
                         <div class="flex gap-x-6">
                             <i class="fab fa-whatsapp text-3xl text-cyan-400 mt-1"></i>
                             <div>
-                                <div class="font-medium">WhatsApp directo</div>
+                                <div class="font-medium">WhatsApp</div>
                                 <a href="https://wa.me/51912345678" target="_blank" class="text-cyan-400 hover:underline">+51 912 345 678</a>
                             </div>
                         </div>
                         <div class="flex gap-x-6">
                             <i class="fas fa-map-marker-alt text-3xl text-cyan-400 mt-1"></i>
                             <div>
-                                <div class="font-medium">Oficina Lima</div>
-                                <div class="text-white/70">San Isidro, Lima • Perú</div>
+                                <div class="font-medium">Ubicación</div>
+                                <div class="text-slate-400">San Isidro, Lima • Perú</div>
                             </div>
                         </div>
                     </div>
                 </div>
                 
-                <div class="md:col-span-7 bg-white/5 rounded-3xl p-10">
+                <div class="md:col-span-7 bg-white/10 rounded-3xl p-10">
                     <form action="https://formspree.io/f/xabcde123" method="POST" class="space-y-8">
                         <div class="grid grid-cols-2 gap-6">
                             <div>
                                 <label class="block text-sm font-medium mb-2">Nombre completo</label>
-                                <input type="text" name="name" required
-                                       class="w-full bg-white/10 border border-white/20 rounded-2xl px-6 py-4 text-white placeholder:text-white/40 focus:outline-none focus:border-cyan-400">
+                                <input type="text" name="name" required class="w-full bg-white/10 border border-white/20 rounded-2xl px-6 py-4 focus:outline-none focus:border-cyan-400 text-white placeholder:text-white/50">
                             </div>
                             <div>
                                 <label class="block text-sm font-medium mb-2">Empresa</label>
-                                <input type="text" name="company" required
-                                       class="w-full bg-white/10 border border-white/20 rounded-2xl px-6 py-4 text-white placeholder:text-white/40 focus:outline-none focus:border-cyan-400">
+                                <input type="text" name="company" required class="w-full bg-white/10 border border-white/20 rounded-2xl px-6 py-4 focus:outline-none focus:border-cyan-400 text-white placeholder:text-white/50">
                             </div>
                         </div>
                         
                         <div>
                             <label class="block text-sm font-medium mb-2">Correo electrónico</label>
-                            <input type="email" name="email" required
-                                   class="w-full bg-white/10 border border-white/20 rounded-2xl px-6 py-4 text-white placeholder:text-white/40 focus:outline-none focus:border-cyan-400">
+                            <input type="email" name="email" required class="w-full bg-white/10 border border-white/20 rounded-2xl px-6 py-4 focus:outline-none focus:border-cyan-400 text-white placeholder:text-white/50">
                         </div>
                         
                         <div>
-                            <label class="block text-sm font-medium mb-2">¿Qué servicio te interesa?</label>
-                            <select name="service" class="w-full bg-white/10 border border-white/20 rounded-2xl px-6 py-4 text-white focus:outline-none focus:border-cyan-400">
+                            <label class="block text-sm font-medium mb-2">Servicio de interés</label>
+                            <select name="service" class="w-full bg-white/10 border border-white/20 rounded-2xl px-6 py-4 focus:outline-none focus:border-cyan-400 text-white">
                                 <option value="">Selecciona una opción</option>
-                                <option value="Legacy">Rescate de sistemas legacy</option>
+                                <option value="Legacy">Modernización de sistemas legacy</option>
                                 <option value="Pentesting">Pruebas de penetración</option>
-                                <option value="SOC">SOC 24/7</option>
                                 <option value="Cumplimiento">Cumplimiento normativo</option>
-                                <option value="Otro">Otro</option>
+                                <option value="SOC">Monitoreo y SOC</option>
+                                <option value="Cloud">Seguridad en la nube</option>
+                                <option value="Capacitacion">Capacitación en ciberseguridad</option>
+                                <option value="Incidentes">Gestión de incidentes</option>
+                                <option value="CISO">CISO como Servicio</option>
                             </select>
                         </div>
                         
                         <div>
                             <label class="block text-sm font-medium mb-2">Mensaje (opcional)</label>
-                            <textarea name="message" rows="4"
-                                      class="w-full bg-white/10 border border-white/20 rounded-2xl px-6 py-4 text-white placeholder:text-white/40 focus:outline-none focus:border-cyan-400"></textarea>
+                            <textarea name="message" rows="4" class="w-full bg-white/10 border border-white/20 rounded-2xl px-6 py-4 focus:outline-none focus:border-cyan-400 text-white placeholder:text-white/50"></textarea>
                         </div>
                         
-                        <button type="submit"
-                                class="w-full bg-cyan-400 hover:bg-white hover:text-black text-black font-semibold text-lg py-6 rounded-3xl flex items-center justify-center gap-x-3">
-                            ENVIAR SOLICITUD DE ANÁLISIS
-                            <i class="fas fa-paper-plane"></i>
+                        <button type="submit" class="w-full bg-cyan-500 hover:bg-cyan-400 text-slate-900 font-semibold py-6 rounded-3xl text-lg">
+                            ENVIAR SOLICITUD
                         </button>
                     </form>
-                    <p class="text-xs text-center text-white/50 mt-8">Tu información está protegida bajo nuestra política de LPDP.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-black text-white/70 py-16">
+    <footer class="bg-slate-950 text-slate-400 py-16">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between items-start gap-12">
+            <div class="flex flex-col md:flex-row justify-between gap-12">
                 <div>
                     <div class="flex items-center gap-x-3 mb-6">
-                        <div class="w-9 h-9 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-2xl flex items-center justify-center text-2xl">V</div>
+                        <div class="w-9 h-9 bg-gradient-to-br from-cyan-500 to-sky-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold">V</div>
                         <span class="text-2xl font-semibold tracking-tighter heading-font text-white">MRA VANGUARD</span>
                     </div>
-                    <p class="text-sm max-w-xs">Ciberseguridad de grado militar para empresas peruanas que no quieren ser la próxima noticia.</p>
-                    <p class="text-xs mt-8">© 2026 MRA Vanguard SAC. Todos los derechos reservados.</p>
+                    <p class="max-w-xs text-sm">Consultoría de ciberseguridad en Lima. Protegiendo la información y el futuro digital de las empresas peruanas.</p>
+                    <p class="text-xs mt-10">© 2026 MRA Vanguard SAC. Todos los derechos reservados.</p>
                 </div>
                 
-                <div class="grid grid-cols-3 gap-x-16">
+                <div class="grid grid-cols-3 gap-x-16 text-sm">
                     <div>
-                        <div class="text-cyan-400 text-sm font-semibold mb-4">SERVICIOS</div>
-                        <ul class="space-y-3 text-sm">
-                            <li><a href="#servicios" class="hover:text-white">Rescate Legacy</a></li>
+                        <div class="text-white font-medium mb-4">Servicios</div>
+                        <ul class="space-y-3">
+                            <li><a href="#servicios" class="hover:text-white">Modernización Legacy</a></li>
                             <li><a href="#servicios" class="hover:text-white">Pentesting</a></li>
-                            <li><a href="#servicios" class="hover:text-white">SOC 24/7</a></li>
                             <li><a href="#servicios" class="hover:text-white">Cumplimiento LPDP</a></li>
+                            <li><a href="#servicios" class="hover:text-white">Seguridad en la Nube</a></li>
                         </ul>
                     </div>
                     <div>
-                        <div class="text-cyan-400 text-sm font-semibold mb-4">EMPRESA</div>
-                        <ul class="space-y-3 text-sm">
-                            <li><a href="#nosotros" class="hover:text-white">Sobre nosotros</a></li>
-                            <li><a href="#" class="hover:text-white">Casos de éxito</a></li>
+                        <div class="text-white font-medium mb-4">Empresa</div>
+                        <ul class="space-y-3">
+                            <li><a href="#nosotros" class="hover:text-white">Nosotros</a></li>
                             <li><a href="#" class="hover:text-white">Blog</a></li>
-                            <li><a href="#" class="hover:text-white">Carreras</a></li>
                         </ul>
                     </div>
                     <div>
-                        <div class="text-cyan-400 text-sm font-semibold mb-4">LEGAL</div>
-                        <ul class="space-y-3 text-sm">
+                        <div class="text-white font-medium mb-4">Legal</div>
+                        <ul class="space-y-3">
                             <li><a href="#" class="hover:text-white">Política de Privacidad</a></li>
-                            <li><a href="#" class="hover:text-white">Términos de Servicio</a></li>
                             <li><a href="#" class="hover:text-white">LPDP</a></li>
                         </ul>
                     </div>
                 </div>
                 
-                <div class="md:text-right">
-                    <div class="text-sm font-medium">Síguenos en</div>
-                    <div class="flex gap-x-6 mt-4 text-2xl">
-                        <a href="#" class="hover:text-cyan-400"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="hover:text-cyan-400"><i class="fab fa-x-twitter"></i></a>
+                <div>
+                    <div class="text-white font-medium mb-4">Contáctanos</div>
+                    <div class="text-sm space-y-2">
+                        <div>+51 912 345 678</div>
+                        <div>contacto@mra-vanguard.pe</div>
+                        <div>San Isidro, Lima</div>
                     </div>
-                    <div class="mt-12 text-xs font-mono">MRA-VANGUARD.PE</div>
                 </div>
             </div>
         </div>
     </footer>
 
     <script>
-        // Tailwind script already loaded
-        function initializeTailwind() {
-            // Nothing extra needed
-        }
-        
-        // Mobile menu
         function toggleMobileMenu() {
-            const menu = document.getElementById('mobile-menu')
-            menu.classList.toggle('hidden')
+            document.getElementById('mobile-menu').classList.toggle('hidden')
         }
         
         document.getElementById('mobile-menu-button').addEventListener('click', toggleMobileMenu)
         
-        // Smooth scroll for anchor links
+        // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
+            anchor.addEventListener('click', function(e) {
                 if (this.getAttribute('href') !== '#') {
                     e.preventDefault()
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    })
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' })
                 }
             })
         })
-        
-        console.log('%c✅ MRA Vanguard - Sitio web profesional cargado correctamente', 'color:#00d4ff; font-family:monospace')
     </script>
 </body>
 </html>
