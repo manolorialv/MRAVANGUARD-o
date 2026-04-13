@@ -3,255 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MRA VANGUARD — Ciberseguridad Especializada · Lima, Perú</title>
-    <meta name="description" content="Consultoría premium de ciberseguridad. Auditamos, fortalecemos y defendemos infraestructuras críticas con especialización en sistemas legacy y cumplimiento normativo peruano.">
+    <title>MRA VANGUARD | Ciberseguridad Especializada</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap');
-        body { font-family: 'Inter', system-ui, sans-serif; }
-        .heading-font { font-family: 'Space Grotesk', sans-serif; }
-        .glass { background: rgba(15, 23, 42, 0.75); backdrop-filter: blur(12px); }
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;700&display=swap');
+        
+        body { font-family: 'Inter', sans-serif; background-color: #0a0a0a; color: white; }
+        .font-mono { font-family: 'JetBrains Mono', monospace; }
+        
+        .terminal-glow {
+            box-shadow: 0 0 15px rgba(34, 197, 94, 0.2);
+        }
+
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #1a1a1a;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #22c55e;
+            border-radius: 10px;
+        }
     </style>
 </head>
-<body class="bg-[#0A0F1C] text-gray-200">
+<body class="scroll-smooth">
 
-    <!-- Navbar -->
-    <nav class="fixed top-0 w-full z-50 bg-[#0A0F1C]/90 backdrop-blur-md border-b border-cyan-500/10">
-        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <div class="w-9 h-9 bg-cyan-500 rounded-xl flex items-center justify-center text-black font-bold text-2xl">M</div>
-                <h1 class="heading-font text-3xl font-semibold tracking-tight">MRA VANGUARD</h1>
+    <nav class="fixed w-full z-50 bg-black/80 backdrop-blur-md border-b border-green-900/30">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold tracking-tighter text-green-500">
+                MRA<span class="text-white">VANGUARD</span>
             </div>
-            <div class="hidden md:flex items-center gap-9 text-sm font-medium">
-                <a href="#servicios" class="hover:text-cyan-400 transition-colors">Servicios</a>
-                <a href="#proceso" class="hover:text-cyan-400 transition-colors">Proceso</a>
-                <a href="#sobre" class="hover:text-cyan-400 transition-colors">Sobre Nosotros</a>
-                <a href="#contacto" class="hover:text-cyan-400 transition-colors">Contacto</a>
+            <div class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-widest">
+                <a href="#servicios" class="hover:text-green-500 transition">Servicios</a>
+                <a href="#metodologia" class="hover:text-green-500 transition">Metodología</a>
+                <a href="#contacto" class="hover:text-green-500 transition">Auditoría Live</a>
             </div>
-            <a href="https://wa.me/51999999999" target="_blank" class="bg-[#25D366] hover:bg-[#128C7E] px-6 py-3 rounded-2xl text-sm font-medium flex items-center gap-2 transition">
-                <i class="fab fa-whatsapp text-xl"></i> WhatsApp
-            </a>
+            <a href="https://wa.me/51999999999" class="bg-green-600 hover:bg-green-500 px-5 py-2 rounded-full text-xs font-bold transition">WHATSAPP</a>
         </div>
     </nav>
 
-    <!-- Hero -->
-    <section class="min-h-screen flex items-center pt-24">
-        <div class="max-w-7xl mx-auto px-6 text-center md:text-left">
-            <div class="max-w-3xl">
-                <h2 class="text-6xl md:text-7xl heading-font font-semibold leading-none tracking-tighter mb-6">
-                    Auditamos, fortalecemos y defendemos<br>la infraestructura digital de su organización.
-                </h2>
-                <p class="text-2xl text-gray-300 mb-10">
-                    Consultoría especializada en entornos críticos, sistemas legacy y cumplimiento normativo peruano.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                    <a href="#contacto" class="bg-white text-black px-10 py-5 rounded-2xl font-semibold text-lg hover:bg-gray-100 transition">Obtener diagnóstico inicial gratuito</a>
-                    <a href="https://wa.me/51999999999?text=Hola%20MRA%20Vanguard%2C%20quiero%20mi%20diagn%C3%B3stico%20inicial%20gratuito" target="_blank" class="border border-white/70 hover:bg-white/10 px-10 py-5 rounded-2xl font-medium text-lg flex items-center gap-3 transition">
-                        <i class="fab fa-whatsapp text-2xl"></i> Hablar por WhatsApp
-                    </a>
-                </div>
+    <section class="h-screen flex items-center justify-center text-center px-6 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-green-900/20 via-black to-black">
+        <div class="max-w-4xl">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6">Blindaje Digital para <span class="text-green-500">Entornos Críticos</span></h1>
+            <p class="text-gray-400 text-lg md:text-xl mb-10 max-w-2xl mx-auto">
+                Consultoría técnica especializada en Lima. Expertos en Hardening de bases de datos, sistemas Legacy y cumplimiento normativo.
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#contacto" class="bg-white text-black px-8 py-4 rounded font-bold hover:bg-green-500 transition">INICIAR DIAGNÓSTICO</a>
+                <a href="#servicios" class="border border-gray-700 px-8 py-4 rounded font-bold hover:bg-gray-800 transition">NUESTROS SERVICIOS</a>
             </div>
         </div>
     </section>
 
-    <!-- Servicios -->
-    <section id="servicios" class="py-24 bg-[#111827]">
-        <div class="max-w-7xl mx-auto px-6">
+    <section id="contacto" class="py-24 bg-black relative overflow-hidden">
+        <div class="container mx-auto px-6 relative z-10">
             <div class="text-center mb-16">
-                <span class="text-cyan-400 uppercase tracking-widest text-sm font-medium">LO QUE HACEMOS</span>
-                <h2 class="heading-font text-5xl font-semibold mt-4">Nuestros Servicios</h2>
-                <p class="mt-6 text-gray-400 max-w-2xl mx-auto">Cada engagement es diseñado a medida. Ofrecemos atención personalizada y metodologías adaptadas al contexto específico de su empresa.</p>
+                <h2 class="text-4xl font-bold mb-4 italic">PRUEBE SU SEGURIDAD</h2>
+                <p class="text-gray-500 font-mono text-sm uppercase">Escaneo de vulnerabilidades en tiempo real vía API</p>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-[#0F172A] p-8 rounded-3xl border border-cyan-500/10 hover:border-cyan-400/30 transition">
-                    <div class="text-5xl mb-6">01</div>
-                    <h3 class="text-2xl font-semibold mb-3">OFENSIVO — Auditoría y Pentesting</h3>
-                    <p class="text-gray-400">Simulaciones reales de ataques avanzados para identificar y priorizar brechas de seguridad antes de que sean explotadas. Reportes ejecutivos detallados bajo estándares OWASP, PTES y OSSTMM.</p>
-                </div>
-                <div class="bg-[#0F172A] p-8 rounded-3xl border border-cyan-500/10 hover:border-cyan-400/30 transition">
-                    <div class="text-5xl mb-6">02</div>
-                    <h3 class="text-2xl font-semibold mb-3">INFRAESTRUCTURA — Hardening de Sistemas</h3>
-                    <p class="text-gray-400">Endurecimiento integral de servidores, redes y endpoints. Implementamos segmentación segura y mejores prácticas CIS Benchmarks y NIST SP 800-53.</p>
-                </div>
-                <div class="bg-[#0F172A] p-8 rounded-3xl border border-cyan-500/10 hover:border-cyan-400/30 transition">
-                    <div class="text-5xl mb-6">03</div>
-                    <h3 class="text-2xl font-semibold mb-3">LEGACY — Seguridad en Sistemas Legacy</h3>
-                    <p class="text-gray-400">Especialistas en FoxPro, Visual Basic 6 y COBOL. Blindaje técnico y estrategias de migración segura sin interrupciones operativas.</p>
-                </div>
-                <div class="bg-[#0F172A] p-8 rounded-3xl border border-cyan-500/10 hover:border-cyan-400/30 transition">
-                    <div class="text-5xl mb-6">04</div>
-                    <h3 class="text-2xl font-semibold mb-3">DATOS — Seguridad en Bases de Datos</h3>
-                    <p class="text-gray-400">Hardening avanzado de Oracle, SQL Server y PostgreSQL. Cifrado, control de privilegios y planes de recuperación ante desastres.</p>
-                </div>
-                <div class="bg-[#0F172A] p-8 rounded-3xl border border-cyan-500/10 hover:border-cyan-400/30 transition">
-                    <div class="text-5xl mb-6">05</div>
-                    <h3 class="text-2xl font-semibold mb-3">CUMPLIMIENTO — GRC y Normativo</h3>
-                    <p class="text-gray-400">Alineación completa con ISO/IEC 27001, Ley N° 29733 y regulaciones SBS y SMV. Gestión integral de riesgos y gobernanza de seguridad.</p>
-                </div>
-                <div class="bg-[#0F172A] p-8 rounded-3xl border border-cyan-500/10 hover:border-cyan-400/30 transition">
-                    <div class="text-5xl mb-6">06</div>
-                    <h3 class="text-2xl font-semibold mb-3">FORMACIÓN — MRA Academy</h3>
-                    <p class="text-gray-400">Programas de capacitación in-company en ethical hacking, secure coding y respuesta a incidentes para fortalecer la primera línea de defensa.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Proceso -->
-    <section id="proceso" class="py-24">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <span class="text-cyan-400 uppercase tracking-widest text-sm font-medium">NUESTRO PROCESO</span>
-                <h2 class="heading-font text-5xl font-semibold mt-4">Metodología</h2>
-                <p class="mt-6 text-gray-400 max-w-xl mx-auto">Framework estructurado y transparente que garantiza visibilidad total en cada etapa del proyecto.</p>
-            </div>
-
-            <div class="grid md:grid-cols-5 gap-8">
-                <div class="text-center">
-                    <div class="text-6xl font-bold text-cyan-400 mb-4">01</div>
-                    <h4 class="font-semibold text-lg">Reconocimiento y Scoping</h4>
-                    <p class="text-sm text-gray-400 mt-3">Definición precisa del alcance, identificación de activos críticos y firma de NDA.</p>
-                </div>
-                <div class="text-center">
-                    <div class="text-6xl font-bold text-cyan-400 mb-4">02</div>
-                    <h4 class="font-semibold text-lg">Análisis y Evaluación</h4>
-                    <p class="text-sm text-gray-400 mt-3">Auditoría técnica exhaustiva y mapeo completo de la superficie de ataque.</p>
-                </div>
-                <div class="text-center">
-                    <div class="text-6xl font-bold text-cyan-400 mb-4">03</div>
-                    <h4 class="font-semibold text-lg">Explotación Controlada</h4>
-                    <p class="text-sm text-gray-400 mt-3">Pruebas adversarias documentadas con metodología forense.</p>
-                </div>
-                <div class="text-center">
-                    <div class="text-6xl font-bold text-cyan-400 mb-4">04</div>
-                    <h4 class="font-semibold text-lg">Reporte y Remediación</h4>
-                    <p class="text-sm text-gray-400 mt-3">Informe ejecutivo y técnico con puntuación CVSS y plan priorizado de acción.</p>
-                </div>
-                <div class="text-center">
-                    <div class="text-6xl font-bold text-cyan-400 mb-4">05</div>
-                    <h4 class="font-semibold text-lg">Verificación y Cierre</h4>
-                    <p class="text-sm text-gray-400 mt-3">Re-evaluación post-remediación y soporte continuo sin costo adicional.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sobre Nosotros -->
-    <section id="sobre" class="py-24 bg-[#111827]">
-        <div class="max-w-4xl mx-auto px-6">
-            <h2 class="heading-font text-5xl font-semibold text-center mb-12">PERITOS. NO GENERALISTAS.</h2>
-            <div class="prose prose-invert max-w-none text-lg">
-                <p class="text-gray-300">MRA Vanguard nace en Lima con una convicción clara: <strong>la ciberseguridad no puede ser un servicio de caja negra.</strong> Cada cliente merece entender exactamente qué se hace, por qué se hace y qué resultados puede esperar.</p>
-                <p class="text-gray-300">Somos una consultora nueva, pero con formación técnica sólida y <strong>conocimiento profundo del ecosistema regulatorio peruano.</strong> Construimos relaciones de largo plazo basadas en transparencia total.</p>
-            </div>
-
-            <div class="mt-16 grid md:grid-cols-2 gap-x-12 gap-y-8 text-sm">
-                <ul class="space-y-5">
-                    <li class="flex gap-4"><span class="text-cyan-400">01</span> Formación avanzada en seguridad ofensiva y defensiva</li>
-                    <li class="flex gap-4"><span class="text-cyan-400">02</span> Metodologías alineadas con ISO 27001, NIST y OWASP</li>
-                    <li class="flex gap-4"><span class="text-cyan-400">03</span> Conocimiento experto del marco regulatorio peruano (Ley 29733, SBS, SMV)</li>
-                </ul>
-                <ul class="space-y-5">
-                    <li class="flex gap-4"><span class="text-cyan-400">04</span> Especialización en sistemas legacy (FoxPro, VB6, COBOL)</li>
-                    <li class="flex gap-4"><span class="text-cyan-400">05</span> Confidencialidad garantizada con NDA desde el primer contacto</li>
-                    <li class="flex gap-4"><span class="text-cyan-400">06</span> Enfoque en relaciones de largo plazo y soporte continuo</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contacto con Análisis de Web -->
-    <section id="contacto" class="py-24">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="heading-font text-5xl font-semibold mb-6">HABLE CON NOSOTROS</h2>
-            <p class="text-xl text-gray-400 mb-12">El diagnóstico inicial es gratuito y sin compromiso. Ingrese la URL de su sitio web para recibir un análisis preliminar inmediato.</p>
-
-            <!-- Formulario Análisis Rápido -->
-            <div class="bg-[#111827] rounded-3xl p-10 border border-cyan-500/20 mb-12" id="analysis-section">
-                <h3 class="text-2xl font-semibold mb-4">Análisis Preliminar de Seguridad Web</h3>
-                <p class="text-gray-400 mb-8">Ingrese la URL de su sitio para obtener un informe automatizado de superficie de ataque.</p>
+            <div class="grid lg:grid-cols-2 gap-12 items-start">
                 
-                <form id="web-analysis-form" class="space-y-6">
-                    <input type="url" id="web-url" placeholder="https://www.ejemplo.com" required 
-                           class="w-full bg-[#0F172A] border border-gray-700 rounded-2xl px-6 py-4 focus:border-cyan-400 outline-none text-white placeholder:text-gray-500">
-                    <button type="submit" 
-                            class="w-full bg-cyan-500 hover:bg-cyan-600 text-black font-semibold py-5 rounded-2xl text-lg transition flex items-center justify-center gap-2">
-                        <span id="btn-text">Realizar Análisis Gratuito</span>
-                    </button>
-                </form>
-            </div>
+                <div class="bg-[#0d0d0d] rounded-xl border border-green-900/50 overflow-hidden terminal-glow">
+                    <div class="bg-gray-900 px-4 py-2 border-b border-green-900/30 flex items-center justify-between">
+                        <div class="flex space-x-2">
+                            <div class="w-3 h-3 rounded-full bg-red-500/50"></div>
+                            <div class="w-3 h-3 rounded-full bg-yellow-500/50"></div>
+                            <div class="w-3 h-3 rounded-full bg-green-500/50"></div>
+                        </div>
+                        <span class="text-[10px] font-mono text-green-800 uppercase tracking-widest leading-none">MRA_VANGUARD_AUDIT_V2.0</span>
+                    </div>
+                    
+                    <div class="p-6">
+                        <div class="flex gap-3 mb-6">
+                            <input type="text" id="target-url" placeholder="ingrese-sitio-web.com" 
+                                   class="flex-1 bg-black border border-green-900/50 p-3 rounded font-mono text-green-500 focus:outline-none focus:ring-1 focus:ring-green-400">
+                            <button onclick="runRealAudit()" id="btn-audit" class="bg-green-700 hover:bg-green-600 px-6 py-3 rounded font-bold transition font-mono text-sm uppercase">
+                                Scan
+                            </button>
+                        </div>
 
-            <!-- Resultado del análisis (se muestra después de enviar) -->
-            <div id="analysis-result" class="hidden bg-[#111827] rounded-3xl p-10 border border-cyan-500/20 text-left">
-                <h3 class="text-2xl font-semibold mb-6 flex items-center gap-3">
-                    📊 Informe Preliminar de Seguridad
-                    <span id="analyzed-url" class="text-cyan-400 text-sm font-normal"></span>
-                </h3>
-                <div class="space-y-6">
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <div class="bg-[#0F172A] p-6 rounded-2xl">
-                            <p class="text-sm text-gray-400">Estado del dominio</p>
-                            <p class="text-emerald-400 font-medium">Activo y accesible</p>
+                        <div id="audit-console" class="hidden font-mono text-[11px] bg-black p-5 rounded border border-green-900/30 h-72 overflow-y-auto custom-scrollbar shadow-inner">
+                            <div id="console-logs" class="leading-relaxed"></div>
                         </div>
-                        <div class="bg-[#0F172A] p-6 rounded-2xl">
-                            <p class="text-sm text-gray-400">Servidor detectado</p>
-                            <p class="font-medium">Apache / Nginx (estimado)</p>
-                        </div>
-                        <div class="bg-[#0F172A] p-6 rounded-2xl">
-                            <p class="text-sm text-gray-400">Riesgo general</p>
-                            <p class="text-amber-400 font-medium">Medio — Recomendamos revisión profunda</p>
+
+                        <div id="cta-whatsapp" class="hidden mt-6 animate-pulse">
+                            <a href="https://wa.me/51999999999?text=Hola MRA Vanguard, mi sitio web mostró vulnerabilidades críticas en el escaneo." 
+                               class="flex items-center justify-center gap-3 w-full bg-red-950 text-red-400 border border-red-500/50 py-4 rounded font-bold hover:bg-red-900 hover:text-white transition">
+                                <i class="fa-brands fa-whatsapp"></i> SOLICITAR MITIGACIÓN URGENTE
+                            </a>
                         </div>
                     </div>
-                    <div>
-                        <p class="font-medium mb-3">Posibles mejoras identificadas:</p>
-                        <ul class="space-y-3 text-sm">
-                            <li class="flex gap-3"><i class="fas fa-check-circle text-emerald-400 mt-1"></i> Certificado SSL/TLS presente pero con oportunidades de mejora</li>
-                            <li class="flex gap-3"><i class="fas fa-check-circle text-emerald-400 mt-1"></i> Cabeceras de seguridad faltantes o incompletas</li>
-                            <li class="flex gap-3"><i class="fas fa-check-circle text-emerald-400 mt-1"></i> Posible exposición de información técnica</li>
-                        </ul>
-                    </div>
                 </div>
-                <div class="mt-10 pt-8 border-t border-gray-700 text-center">
-                    <p class="text-gray-400 mb-4">Este es un análisis preliminar automatizado. Para un reporte completo de pentesting con herramientas avanzadas, contacte a nuestro equipo.</p>
-                    <a id="whatsapp-cta" href="#" target="_blank"
-                       class="inline-flex items-center gap-3 bg-[#25D366] text-white px-8 py-4 rounded-2xl font-medium hover:bg-[#128C7E] transition">
-                        <i class="fab fa-whatsapp text-2xl"></i>
-                        Recibir análisis completo por WhatsApp
-                    </a>
+
+                <div class="bg-gray-900/50 p-10 rounded-xl border border-gray-800 backdrop-blur-sm">
+                    <h3 class="text-2xl font-bold mb-6">CONSULTA ESPECIALIZADA</h3>
+                    <form class="space-y-5">
+                        <div class="grid md:grid-cols-2 gap-5">
+                            <input type="text" placeholder="Nombre" class="w-full bg-black border border-gray-800 p-4 rounded focus:border-green-500 outline-none transition text-sm">
+                            <input type="email" placeholder="Email Corporativo" class="w-full bg-black border border-gray-800 p-4 rounded focus:border-green-500 outline-none transition text-sm">
+                        </div>
+                        <select class="w-full bg-black border border-gray-800 p-4 rounded focus:border-green-500 outline-none transition text-sm text-gray-400">
+                            <option>Seguridad en Sistemas Legacy (VB6/FoxPro)</option>
+                            <option>Hardening Oracle / SQL Server</option>
+                            <option>Auditoría de Cumplimiento (Ley 29733)</option>
+                            <option>Servicios de Pentesting</option>
+                        </select>
+                        <textarea placeholder="Detalle su caso técnico..." rows="4" class="w-full bg-black border border-gray-800 p-4 rounded focus:border-green-500 outline-none transition text-sm"></textarea>
+                        <button class="w-full bg-white text-black py-4 rounded font-bold hover:bg-green-500 transition uppercase tracking-widest text-sm">Enviar a MRA Vanguard</button>
+                    </form>
                 </div>
-            </div>
 
-            <!-- Formulario general de contacto -->
-            <div class="bg-[#111827] rounded-3xl p-10 border border-cyan-500/20">
-                <form action="https://formspree.io/f/tu-id-aqui" method="POST" class="space-y-6">
-                    <input type="text" name="nombre" placeholder="Nombre y apellido" required class="w-full bg-[#0F172A] border border-gray-700 rounded-2xl px-6 py-4 focus:border-cyan-400 outline-none">
-                    <input type="email" name="email" placeholder="Correo electrónico" required class="w-full bg-[#0F172A] border border-gray-700 rounded-2xl px-6 py-4 focus:border-cyan-400 outline-none">
-                    <textarea name="mensaje" rows="4" placeholder="Cuéntenos brevemente su necesidad o proyecto..." required class="w-full bg-[#0F172A] border border-gray-700 rounded-3xl px-6 py-4 focus:border-cyan-400 outline-none"></textarea>
-                    <button type="submit" class="w-full bg-cyan-500 hover:bg-cyan-600 text-black font-semibold py-5 rounded-2xl text-lg transition">Enviar Consulta General</button>
-                </form>
-            </div>
-
-            <div class="mt-12 flex flex-wrap justify-center gap-x-10 gap-y-4 text-sm">
-                <a href="mailto:contacto@mravanguard.pe" class="flex items-center gap-3 hover:text-cyan-400"><i class="fas fa-envelope"></i> contacto@mravanguard.pe</a>
-                <a href="https://wa.me/51999999999" target="_blank" class="flex items-center gap-3 hover:text-cyan-400"><i class="fab fa-whatsapp text-[#25D366]"></i> +51 999 999 999 (WhatsApp)</a>
-                <div class="flex items-center gap-3"><i class="fas fa-map-marker-alt"></i> Lima, Perú · Atención nacional</div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-black py-12 text-center text-gray-500 text-sm border-t border-gray-800">
-        © 2026 MRA VANGUARD — Consultoría de Ciberseguridad · Lima, Perú
+    <footer class="py-12 border-t border-gray-900 text-center">
+        <p class="text-gray-600 text-xs font-mono uppercase tracking-[0.3em]">
+            © 2026 MRA VANGUARD · Lima, Perú · Especialistas en Ciber-Armor Engineering
+        </p>
     </footer>
 
-    <!-- Botón flotante WhatsApp -->
-    <a href="https://wa.me/51999999999?text=Hola%20MRA%20Vanguard%2C%20quiero%20mi%20diagn%C3%B3stico%20inicial%20gratuito" target="_blank"
-       class="fixed bottom-8 right-8 bg-[#25D366] w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition z-50">
-        <i class="fab fa-whatsapp text-4xl text-white"></i>
-    </a>
-
-    <script src="main.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
