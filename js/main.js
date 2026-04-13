@@ -1,106 +1,64 @@
-/**
- * Lógica de Auditoría Real para MRA Vanguard
- * Utiliza APIs públicas para detección de headers de seguridad.
- */
+// main.js - MRA VANGUARD
 
-async function runRealAudit() {
-    const target = document.getElementById('target-url').value.trim();
-    
-    // Validación básica de URL/Dominio
-    if (!target || target.length < 4) {
-        alert("Por favor, ingrese un dominio válido (ej. google.com)");
-        return;
-    }
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('%cMRA VANGUARD - Sitio premium cargado correctamente', 'color: #00d4ff; font-weight: bold; font-size: 13px;');
 
-    const btn = document.getElementById('btn-audit');
-    const logs = document.getElementById('console-logs');
-    const consoleBox = document.getElementById('audit-console');
-    const cta = document.getElementById('cta-whatsapp');
-
-    // UI Reset
-    btn.disabled = true;
-    btn.innerText = "BUSCANDO...";
-    logs.innerHTML = `<span class="text-blue-500">[SYSTEM]</span> Iniciando protocolo de auditoría sobre <span class="text-white">${target}</span>...<br>`;
-    consoleBox.classList.remove('hidden');
-    cta.classList.add('hidden');
-
-    try {
-        await sleep(800);
-        addLog("Resolviendo DNS y saltando firewalls de inspección...", "text-gray-500");
-        
-        // LLAMADA REAL: Obtenemos los headers del sitio ingresado
-        // Usamos un proxy de CORS para permitir la petición desde el navegador
-        const proxyUrl = "https://api.allorigins.win/get?url=";
-        const targetApi = `https://api.hackertarget.com/httpheaders/?q=${target}`;
-        
-        const response = await fetch(proxyUrl + encodeURIComponent(targetApi));
-        const data = await response.json();
-        
-        await sleep(1200);
-        addLog("Analizando respuestas de cabecera HTTP (RFC 7230)...", "text-green-500");
-
-        if (data.contents) {
-            const raw = data.contents;
-            const headersLower = raw.toLowerCase();
-
-            // Análisis de Errores Reales
-            let issuesFound = 0;
-
-            if (headersLower.includes("server")) {
-                const serverMatch = raw.match(/Server: (.*)/i);
-                addLog(`!! ALERTA: Banner de servidor detectado: [${serverMatch ? serverMatch[1].trim() : "Expuesto"}]`, "text-yellow-500");
-                issuesFound++;
+    // Scroll suave para los enlaces del menú
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
             }
+        });
+    });
 
-            if (!headersLower.includes("strict-transport-security")) {
-                addLog("!! CRÍTICO: HSTS (Strict-Transport-Security) no detectado. Riesgo de MITM.", "text-red-500 font-bold");
-                issuesFound++;
+    // Animación de aparición de tarjetas al hacer scroll
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
             }
+        });
+    }, {
+        threshold: 0.15,
+        rootMargin: '0px 0px -50px 0px'
+    });
 
-            if (!headersLower.includes("x-frame-options")) {
-                addLog("!! RIESGO: Falta cabecera X-Frame-Options (Vulnerable a Clickjacking).", "text-red-400");
-                issuesFound++;
+    document.querySelectorAll('.service-card, .cert-card').forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(40px)';
+        card.style.transition = 'all 0.7s cubic-bezier(0.4, 0, 0.2, 1)';
+        observer.observe(card);
+    });
+
+    // Efecto en botones principales
+    const primaryButtons = document.querySelectorAll('.btn-primary');
+    primaryButtons.forEach(btn => {
+        btn.addEventListener('click', function () {
+            const originalText = this.textContent;
+            if (originalText.includes('Diagnóstico') || originalText.includes('Conversación')) {
+                this.style.transition = 'all 0.3s';
+                this.textContent = 'Procesando...';
+                
+                setTimeout(() => {
+                    this.textContent = originalText;
+                }, 1600);
             }
+        });
+    });
 
-            if (!headersLower.includes("content-security-policy")) {
-                addLog("!! INFO: Política de Seguridad de Contenido (CSP) no definida.", "text-blue-400");
-                issuesFound++;
-            }
-
-            // Dump técnico real
-            addLog("<br>--- RAW DATA DUMP ---", "text-gray-600");
-            addLog(raw.substring(0, 400).replace(/\n/g, "<br>"), "text-gray-500 italic");
-
-            if (issuesFound > 0) {
-                await sleep(500);
-                addLog(`<br>[RESULTADO] Se han encontrado ${issuesFound} brechas de configuración.`, "text-red-500 font-bold");
-                cta.classList.remove('hidden');
-            } else {
-                addLog("<br>[RESULTADO] No se detectaron fallos críticos superficiales.", "text-green-500 font-bold");
-            }
+    // Pequeño efecto parallax sutil en el hero (opcional)
+    window.addEventListener('scroll', () => {
+        const hero = document.querySelector('.hero');
+        if (hero) {
+            const scrollY = window.scrollY;
+            hero.style.backgroundPositionY = `${scrollY * 0.4}px`;
         }
-
-    } catch (error) {
-        addLog("ERROR: Error de conexión con los nodos de escaneo. Intente con otro dominio.", "text-red-600 font-bold");
-        console.error(error);
-    } finally {
-        btn.disabled = false;
-        btn.innerText = "SCAN";
-    }
-}
-
-function addLog(message, colorClass) {
-    const logs = document.getElementById('console-logs');
-    const line = document.createElement('div');
-    line.className = `mb-1 ${colorClass}`;
-    line.innerHTML = `<span class="text-green-900 font-bold">></span> ${message}`;
-    logs.appendChild(line);
-    
-    // Auto-scroll
-    const consoleBox = document.getElementById('audit-console');
-    consoleBox.scrollTop = consoleBox.scrollHeight;
-}
-
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
+    });
+});
