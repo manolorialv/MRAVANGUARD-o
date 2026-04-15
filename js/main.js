@@ -1,87 +1,93 @@
-document.addEventListener('DOMContentLoaded', () => {
+/**
+ * MRA VANGUARD - Lógica de Interfaz
+ */
 
-  // Smooth scroll
-  document.querySelectorAll('a[href^="#"]').forEach(link => {
-    link.addEventListener('click', e => {
-      const target = document.querySelector(link.getAttribute('href'));
-      if (target) {
-        e.preventDefault();
-        const offset = 80;
-        const top = target.getBoundingClientRect().top + window.scrollY - offset;
-        window.scrollTo({ top, behavior: 'smooth' });
-      }
-    });
-  });
+function analizarURL() {
+    const urlInput = document.getElementById('urlInput').value;
+    const resultsDiv = document.getElementById('demoResults');
 
-  // Demo de análisis rápido (simulado pero muy profesional)
-  window.analizarURL = function() {
-    const input = document.getElementById('urlInput');
-    const results = document.getElementById('demoResults');
-    const url = input.value.trim();
-
-    if (!url) {
-      alert('Por favor ingresa una URL válida');
-      return;
+    if (!urlInput || !urlInput.includes('.')) {
+        alert("Por favor, ingrese una URL válida.");
+        return;
     }
 
-    results.classList.remove('hidden');
-    results.innerHTML = `
-      <div class="flex justify-center mb-6"><div class="animate-spin w-8 h-8 border-4 border-cyan-400 border-t-transparent rounded-full"></div></div>
-      <p class="text-center text-zinc-400 mb-8">Analizando con nuestras herramientas + APIs de VirusTotal y PageSpeed Insights...</p>
+    // Mostrar estado de carga
+    resultsDiv.classList.remove('hidden');
+    resultsDiv.innerHTML = `
+        <div class="flex items-center justify-center py-8">
+            <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-cyan-500"></div>
+            <span class="ml-4 text-zinc-400 font-mono">Iniciando escaneo OWASP en ${urlInput}...</span>
+        </div>
     `;
 
-    setTimeout(() => {
-      results.innerHTML = `
-        <div class="demo-result bg-zinc-800 p-8 rounded-3xl">
-          <h3 class="text-2xl font-bold mb-6 flex items-center gap-3"><span class="text-emerald-400">✅</span> Análisis de ${url}</h3>
-          <div class="grid grid-cols-2 gap-8">
-            <div>
-              <p class="text-zinc-400 text-sm">Puntuación de Seguridad</p>
-              <p class="text-6xl font-bold text-emerald-400">87<span class="text-2xl">/100</span></p>
-              <p class="text-xs text-emerald-400 mt-1">3 vulnerabilidades críticas detectadas</p>
+    // Simulación de análisis por etapas
+    const etapas = [
+        "Verificando certificados SSL/TLS...",
+        "Escaneando encabezados de seguridad (HSTS, CSP)...",
+        "Buscando puertos abiertos y servicios expuestos...",
+        "Analizando scripts de pasarelas de pago..."
+    ];
+
+    let i = 0;
+    const interval = setInterval(() => {
+        if (i < etapas.length) {
+            resultsDiv.innerHTML = `
+                <div class="flex items-center justify-center py-8">
+                    <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-cyan-500"></div>
+                    <span class="ml-4 text-zinc-400 font-mono">${etapas[i]}</span>
+                </div>
+            `;
+            i++;
+        } else {
+            clearInterval(interval);
+            mostrarResultadoFinal(urlInput);
+        }
+    }, 1200);
+}
+
+function mostrarResultadoFinal(url) {
+    const resultsDiv = document.getElementById('demoResults');
+    
+    // Resultados simulados pero con tono profesional
+    resultsDiv.innerHTML = `
+        <div class="demo-result bg-zinc-900 border border-zinc-800 p-6 rounded-2xl">
+            <div class="flex justify-between items-center mb-6">
+                <h4 class="font-bold text-lg text-cyan-400">Reporte Preliminar: ${url}</h4>
+                <span class="px-3 py-1 bg-yellow-500/10 text-yellow-500 text-xs rounded-full border border-yellow-500/20 font-bold">RIESGO MODERADO</span>
             </div>
-            <div>
-              <p class="text-zinc-400 text-sm">Puntuación de Usabilidad</p>
-              <p class="text-6xl font-bold text-amber-400">64<span class="text-2xl">/100</span></p>
-              <p class="text-xs text-amber-400 mt-1">Tiempo de carga y accesibilidad mejorables</p>
+            
+            <div class="grid md:grid-cols-3 gap-4 mb-6">
+                <div class="p-4 bg-black rounded-xl border border-zinc-800">
+                    <p class="text-zinc-500 text-xs mb-1">Cifrado SSL</p>
+                    <p class="text-green-400 font-bold">Óptimo</p>
+                </div>
+                <div class="p-4 bg-black rounded-xl border border-zinc-800">
+                    <p class="text-zinc-500 text-xs mb-1">Encabezados</p>
+                    <p class="text-red-400 font-bold">Faltan CSP/HSTS</p>
+                </div>
+                <div class="p-4 bg-black rounded-xl border border-zinc-800">
+                    <p class="text-zinc-500 text-xs mb-1">Pasarelas</p>
+                    <p class="text-cyan-400 font-bold">Detectadas</p>
+                </div>
             </div>
-          </div>
-          <ul class="mt-10 space-y-3 text-sm">
-            <li class="flex justify-between"><span class="text-red-400">• VirusTotal detectó 2 alertas de malware</span><span class="text-zinc-500">Alta prioridad</span></li>
-            <li class="flex justify-between"><span class="text-amber-400">• Posible inyección SQL en formulario</span><span class="text-zinc-500">Media prioridad</span></li>
-            <li class="flex justify-between"><span class="text-cyan-400">• Certificado SSL caducado en 18 días</span><span class="text-zinc-500">Baja prioridad</span></li>
-          </ul>
-          <p class="text-center text-cyan-400 mt-10 font-medium">¿Quieres el análisis completo y un plan de acción personalizado?<br><a href="#contacto" class="underline">Habla con nuestro equipo ahora →</a></p>
+
+            <p class="text-sm text-zinc-400 mb-6 italic">
+                * Se han detectado posibles fugas de información en encabezados y falta de blindaje en scripts transaccionales. Este análisis es superficial.
+            </p>
+
+            <button onclick="document.getElementById('contacto').scrollIntoView()" class="w-full bg-zinc-800 hover:bg-zinc-700 text-white font-bold py-3 rounded-xl transition-all">
+                Obtener Informe Detallado Gratis
+            </button>
         </div>
-      `;
-    }, 1800);
-  };
+    `;
+}
 
-  console.log('%cMRA VANGUARD - Consultoría de Ciberseguridad cargada 🚀', 'color:#00f5ff; font-weight:bold');
-});
-
-// main.js - MRA VANGUARD
-document.addEventListener('DOMContentLoaded', () => {
-    console.log('%cMRA VANGUARD - Consultoría de Ciberseguridad cargada correctamente', 'color: #60a5fa; font-weight: bold;');
-
-    // Smooth scroll para enlaces internos (si tienes menú)
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) target.scrollIntoView({ behavior: 'smooth' });
+// Suavizar scroll de navegación
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
         });
-    });
-
-    // Puedes agregar aquí animaciones de fade-in para las cards de servicios si quieres
-    const serviceCards = document.querySelectorAll('.service-card');
-    serviceCards.forEach((card, index) => {
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(30px)';
-        setTimeout(() => {
-            card.style.transition = 'all 0.6s ease';
-            card.style.opacity = '1';
-            card.style.transform = 'translateY(0)';
-        }, 200 * index);
     });
 });
