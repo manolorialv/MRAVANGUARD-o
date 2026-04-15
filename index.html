@@ -4,25 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MRA VANGUARD | Ingeniería en Ciberseguridad Perú</title>
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
     <style>
-        body { background-color: #000; color: #fff; font-family: 'Inter', sans-serif; }
-        .glow-cyan { box-shadow: 0 0 20px rgba(6, 182, 212, 0.15); }
-        .gradient-text { background: linear-gradient(90deg, #06b6d4, #ffffff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        body { 
+            background-color: #000; 
+            color: #fff; 
+            font-family: 'Inter', sans-serif; 
+        }
+        .glow-cyan { 
+            box-shadow: 0 0 20px rgba(6, 182, 212, 0.15); 
+        }
+        .gradient-text { 
+            background: linear-gradient(90deg, #06b6d4, #ffffff); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+        }
+        .demo-result { animation: fadeIn 0.5s ease-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
-<body>
+<body class="bg-black">
 
   <nav class="fixed w-full z-50 bg-black/90 backdrop-blur-md border-b border-zinc-800">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <div class="text-2xl font-bold tracking-tighter text-cyan-500">MRA VANGUARD</div>
+      <div class="text-2xl font-bold tracking-tighter text-cyan-500 underline decoration-cyan-800">MRA VANGUARD</div>
       <div class="hidden md:flex gap-8 text-sm font-medium items-center">
-        <a href="#nosotros" class="hover:text-cyan-400">Nosotros</a>
-        <a href="#servicios" class="hover:text-cyan-400">Servicios</a>
-        <a href="#certificaciones" class="hover:text-cyan-400">Certificaciones</a>
-        <a href="#blog" class="hover:text-cyan-400">Blog</a>
+        <a href="#nosotros" class="hover:text-cyan-400 transition">Nosotros</a>
+        <a href="#servicios" class="hover:text-cyan-400 transition">Servicios</a>
+        <a href="#blog" class="hover:text-cyan-400 transition">Blog</a>
         <a href="#contacto" class="bg-cyan-500 text-black px-5 py-2 rounded-xl font-bold hover:bg-cyan-400 transition-all">Contacto</a>
       </div>
     </div>
@@ -30,8 +43,13 @@
 
   <section class="pt-40 pb-20 px-6 text-center">
     <div class="max-w-4xl mx-auto">
+      <span class="text-cyan-500 font-mono text-sm tracking-widest uppercase mb-4 block">Ingeniería de Ciclo Cerrado</span>
       <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight">Ingeniería que anticipa el <span class="gradient-text">riesgo digital.</span></h1>
-      <p class="text-zinc-400 text-lg mb-10 max-w-2xl mx-auto">Elevamos la resiliencia de empresas peruanas mediante ciberseguridad de ciclo cerrado y modernización de sistemas críticos.</p>
+      <p class="text-zinc-400 text-lg mb-10 max-w-2xl mx-auto">Protegemos la continuidad operativa en Perú mediante ciberseguridad ofensiva y modernización de sistemas críticos.</p>
+      <div class="flex flex-col md:flex-row gap-4 justify-center">
+        <a href="#contacto" class="bg-cyan-500 hover:bg-cyan-600 text-black font-bold px-8 py-4 rounded-2xl transition-all">Iniciar Diagnóstico</a>
+        <a href="#demo" class="border border-zinc-700 hover:bg-zinc-900 px-8 py-4 rounded-2xl transition-all">Probar Analizador</a>
+      </div>
     </div>
   </section>
 
@@ -41,20 +59,21 @@
         <div>
           <span class="text-cyan-500 font-mono text-sm tracking-widest uppercase mb-4 block">Sobre Nosotros</span>
           <h2 class="text-4xl font-bold mb-6">Expertos en proteger la continuidad de su negocio.</h2>
-          <p class="text-zinc-400 mb-6 leading-relaxed">En <strong>MRA Vanguard</strong>, no somos solo consultores; somos ingenieros dedicados a cerrar la brecha entre la vulnerabilidad y la solución. Nos especializamos en el ecosistema tecnológico peruano, dominando desde sistemas legados en FoxPro hasta arquitecturas modernas de nube.</p>
+          <p class="text-zinc-400 mb-6 leading-relaxed">En <strong>MRA Vanguard</strong>, no somos solo consultores; somos ingenieros dedicados a cerrar la brecha entre la vulnerabilidad y la solución. Nos especializamos en el ecosistema técnico peruano: desde sistemas legacy en <strong>Visual FoxPro</strong> hasta nubes escalables.</p>
           <div class="grid grid-cols-2 gap-6">
             <div class="border-l-2 border-cyan-500 pl-4">
               <h4 class="text-2xl font-bold">100%</h4>
-              <p class="text-xs text-zinc-500 uppercase">Remediación Técnica</p>
+              <p class="text-xs text-zinc-500 uppercase font-bold">Remediación Técnica</p>
             </div>
             <div class="border-l-2 border-cyan-500 pl-4">
               <h4 class="text-2xl font-bold">24/7</h4>
-              <p class="text-xs text-zinc-500 uppercase">Vigilancia Crítica</p>
+              <p class="text-xs text-zinc-500 uppercase font-bold">Vigilancia Crítica</p>
             </div>
           </div>
         </div>
-        <div class="bg-zinc-900 aspect-video rounded-3xl border border-zinc-800 flex items-center justify-center glow-cyan">
-            <i class="fa-solid fa-microchip text-8xl text-zinc-800"></i>
+        <div class="bg-zinc-900 aspect-video rounded-3xl border border-zinc-800 flex flex-col items-center justify-center glow-cyan">
+            <i class="fa-solid fa-microchip text-8xl text-zinc-800 mb-4"></i>
+            <span class="text-zinc-700 font-mono text-sm tracking-widest uppercase">MRA VANGUARD TECH</span>
         </div>
       </div>
     </div>
@@ -62,7 +81,7 @@
 
   <section id="servicios" class="py-24 bg-black">
     <div class="max-w-6xl mx-auto px-6">
-      <h2 class="text-4xl font-bold mb-16 text-center">Portafolio de Ingeniería</h2>
+      <h2 class="text-4xl font-bold mb-16 text-center">Soluciones de Ingeniería</h2>
       <div class="grid md:grid-cols-3 gap-8">
         
         <div class="bg-zinc-900/50 p-8 rounded-3xl border border-zinc-800 hover:border-cyan-500 transition-all glow-cyan">
@@ -70,7 +89,7 @@
             <i class="fa-solid fa-shield-halved"></i>
           </div>
           <h3 class="text-xl font-bold mb-4">Cyber Resilience Engine</h3>
-          <p class="text-zinc-400 text-sm mb-6">Pentesting y Hardening inmediato. No solo detectamos el fallo, aplicamos la solución técnica de raíz bajo normas NIST.</p>
+          <p class="text-zinc-400 text-sm">Pentesting y Hardening inmediato. Identificamos vulnerabilidades y las parchamos en el acto bajo estándares NIST/CIS.</p>
         </div>
 
         <div class="bg-zinc-900/50 p-8 rounded-3xl border border-zinc-800 hover:border-cyan-500 transition-all">
@@ -78,7 +97,7 @@
             <i class="fa-solid fa-chart-line"></i>
           </div>
           <h3 class="text-xl font-bold mb-4">Revenue Sentinel</h3>
-          <p class="text-zinc-400 text-sm mb-6">Monitoreo en tiempo real de pasarelas como Niubiz e Izipay. Aseguramos que cada transacción llegue a su destino.</p>
+          <p class="text-zinc-400 text-sm">Vigilancia de pasarelas (Niubiz, Izipay, Culqi). Notificación instantánea vía WhatsApp ante caídas para evitar fugas de capital.</p>
         </div>
 
         <div class="bg-zinc-900/50 p-8 rounded-3xl border border-zinc-800 hover:border-cyan-500 transition-all">
@@ -86,80 +105,122 @@
             <i class="fa-solid fa-network-wired"></i>
           </div>
           <h3 class="text-xl font-bold mb-4">Legacy Bridge</h3>
-          <p class="text-zinc-400 text-sm mb-6">Interoperabilidad estratégica para sistemas en FoxPro o SQL antiguo. Modernidad sin migraciones traumáticas.</p>
+          <p class="text-zinc-400 text-sm">Conectamos sus sistemas antiguos (FoxPro, Oracle, SQL) con la nube. Visualice sus KPIs desde cualquier móvil.</p>
         </div>
 
       </div>
     </div>
   </section>
 
-  <section id="certificaciones" class="py-20 bg-zinc-950">
+  <section class="py-20 bg-zinc-950">
     <div class="max-w-6xl mx-auto px-6 text-center">
       <h2 class="text-2xl font-bold mb-12 text-zinc-400">Respaldados por Estándares Globales</h2>
       <div class="flex flex-wrap justify-center gap-10 opacity-50 grayscale hover:grayscale-0 transition-all">
-        <div class="flex flex-col items-center"><i class="fa-solid fa-award text-4xl mb-2"></i><span class="text-xs">ISO 27001 Auditor</span></div>
-        <div class="flex flex-col items-center"><i class="fa-solid fa-user-shield text-4xl mb-2"></i><span class="text-xs">OSCP Certified</span></div>
-        <div class="flex flex-col items-center"><i class="fa-solid fa-lock text-4xl mb-2"></i><span class="text-xs">CISSP Framework</span></div>
-        <div class="flex flex-col items-center"><i class="fa-solid fa-building-shield text-4xl mb-2"></i><span class="text-xs">NIST Specialist</span></div>
+        <div class="flex flex-col items-center"><i class="fa-solid fa-award text-4xl mb-2 text-cyan-500"></i><span class="text-xs">ISO 27001 Auditor</span></div>
+        <div class="flex flex-col items-center"><i class="fa-solid fa-user-shield text-4xl mb-2 text-cyan-500"></i><span class="text-xs">OSCP Certified</span></div>
+        <div class="flex flex-col items-center"><i class="fa-solid fa-lock text-4xl mb-2 text-cyan-500"></i><span class="text-xs">CISSP Framework</span></div>
+        <div class="flex flex-col items-center"><i class="fa-solid fa-building-shield text-4xl mb-2 text-cyan-500"></i><span class="text-xs">NIST Specialist</span></div>
       </div>
     </div>
   </section>
 
-  <section id="blog" class="py-24 bg-black">
+  <section id="demo" class="py-24 bg-black">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold">Diagnóstico de Superficie</h2>
+        <p class="text-zinc-400">Analice rápidamente la seguridad externa de su plataforma.</p>
+      </div>
+      <div class="bg-zinc-900 p-8 rounded-3xl border border-zinc-800">
+        <div class="flex flex-col md:flex-row gap-4">
+          <input id="urlInput" type="url" placeholder="https://tu-empresa.com" class="flex-1 bg-zinc-800 border border-zinc-700 rounded-2xl px-6 py-4 focus:outline-none focus:border-cyan-500 text-white">
+          <button onclick="analizarURL()" class="bg-cyan-500 hover:bg-cyan-600 text-black font-bold px-10 rounded-2xl transition-all">Analizar Ahora</button>
+        </div>
+        <div id="demoResults" class="mt-8 hidden"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="blog" class="py-24 bg-zinc-950">
     <div class="max-w-6xl mx-auto px-6">
-      <div class="flex justify-between items-end mb-12">
-        <h2 class="text-4xl font-bold">Insights de Ciberseguridad</h2>
-        <a href="#" class="text-cyan-500 hover:underline">Ver todo el blog →</a>
-      </div>
+      <h2 class="text-4xl font-bold mb-12">Blog: Insights de Ciberseguridad</h2>
       <div class="grid md:grid-cols-3 gap-8">
-        <article class="group cursor-pointer">
-          <div class="bg-zinc-900 h-52 rounded-2xl mb-4 overflow-hidden border border-zinc-800 transition-all group-hover:border-cyan-500/50">
-            <div class="p-8 flex items-center justify-center h-full">
-                <i class="fa-solid fa-database text-5xl text-zinc-800 group-hover:text-cyan-500/20 transition-all"></i>
-            </div>
+        <article class="bg-zinc-900 rounded-3xl overflow-hidden border border-zinc-800 hover:border-cyan-500 transition-all">
+          <div class="h-48 bg-zinc-800 flex items-center justify-center"><i class="fa-solid fa-database text-4xl text-cyan-900"></i></div>
+          <div class="p-6">
+            <h3 class="font-bold mb-2">Asegurando Visual FoxPro en 2026</h3>
+            <p class="text-zinc-500 text-sm mb-4">Estrategias de blindaje para sistemas legados sin soporte oficial.</p>
+            <a href="#" class="text-cyan-400 text-sm font-bold">Leer más →</a>
           </div>
-          <h3 class="font-bold text-lg mb-2">Asegurando bases de datos Legacy en Perú 2026</h3>
-          <p class="text-zinc-500 text-sm">Cómo evitar el ransomware en sistemas que "ya no tienen soporte".</p>
         </article>
-        <article class="group cursor-pointer">
-          <div class="bg-zinc-900 h-52 rounded-2xl mb-4 border border-zinc-800 transition-all group-hover:border-cyan-500/50 flex items-center justify-center">
-            <i class="fa-solid fa-credit-card text-5xl text-zinc-800"></i>
+        <article class="bg-zinc-900 rounded-3xl overflow-hidden border border-zinc-800 hover:border-cyan-500 transition-all">
+          <div class="h-48 bg-zinc-800 flex items-center justify-center"><i class="fa-solid fa-credit-card text-4xl text-cyan-900"></i></div>
+          <div class="p-6">
+            <h3 class="font-bold mb-2">Checkout Seguro: Niubiz & Izipay</h3>
+            <p class="text-zinc-500 text-sm mb-4">Cómo evitar el robo de tarjetas en formularios web personalizados.</p>
+            <a href="#" class="text-cyan-400 text-sm font-bold">Leer más →</a>
           </div>
-          <h3 class="font-bold text-lg mb-2">Niubiz vs Izipay: Seguridad en el Checkout</h3>
-          <p class="text-zinc-500 text-sm">Análisis técnico de las brechas más comunes en pasarelas locales.</p>
         </article>
-        <article class="group cursor-pointer">
-          <div class="bg-zinc-900 h-52 rounded-2xl mb-4 border border-zinc-800 transition-all group-hover:border-cyan-500/50 flex items-center justify-center">
-            <i class="fa-solid fa-gavel text-5xl text-zinc-800"></i>
+        <article class="bg-zinc-900 rounded-3xl overflow-hidden border border-zinc-800 hover:border-cyan-500 transition-all">
+          <div class="h-48 bg-zinc-800 flex items-center justify-center"><i class="fa-solid fa-gavel text-4xl text-cyan-900"></i></div>
+          <div class="p-6">
+            <h3 class="font-bold mb-2">Ley de Datos Personales Perú</h3>
+            <p class="text-zinc-500 text-sm mb-4">Guía práctica para cumplir con la Ley 29733 este año.</p>
+            <a href="#" class="text-cyan-400 text-sm font-bold">Leer más →</a>
           </div>
-          <h3 class="font-bold text-lg mb-2">Ley 29733: Lo que la SBS exigirá este año</h3>
-          <p class="text-zinc-500 text-sm">Guía rápida de cumplimiento para el sector financiero peruano.</p>
         </article>
       </div>
     </div>
   </section>
 
-  <section id="contacto" class="py-24 bg-zinc-950">
+  <section id="contacto" class="py-24 bg-black">
     <div class="max-w-xl mx-auto px-6 text-center">
-      <h2 class="text-4xl font-bold mb-4">¿Listo para blindar su empresa?</h2>
-      <p class="text-zinc-400 mb-10">Agende un diagnóstico confidencial con nuestros ingenieros senior.</p>
-      <form action="https://formspree.io/f/TU_CODIGO" method="POST" class="space-y-4">
+      <h2 class="text-4xl font-bold mb-10">Solicitar Consultoría Senior</h2>
+      <form class="space-y-4">
         <input type="text" placeholder="Nombre y Empresa" class="w-full bg-zinc-900 border border-zinc-800 rounded-xl px-6 py-4 outline-none focus:border-cyan-500">
         <input type="email" placeholder="Correo Corporativo" class="w-full bg-zinc-900 border border-zinc-800 rounded-xl px-6 py-4 outline-none focus:border-cyan-500">
-        <textarea placeholder="¿Qué sistema necesita proteger?" rows="4" class="w-full bg-zinc-900 border border-zinc-800 rounded-xl px-6 py-4 outline-none focus:border-cyan-500"></textarea>
-        <button class="w-full bg-cyan-500 text-black font-bold py-4 rounded-xl hover:bg-cyan-400 transition-all shadow-lg shadow-cyan-500/10">Enviar Consulta</button>
+        <textarea placeholder="¿Qué sistema desea blindar?" rows="4" class="w-full bg-zinc-900 border border-zinc-800 rounded-xl px-6 py-4 outline-none focus:border-cyan-500"></textarea>
+        <button type="submit" class="w-full bg-cyan-500 text-black font-bold py-4 rounded-xl hover:bg-cyan-400 transition-all">Enviar Mensaje</button>
       </form>
+      <p class="mt-8 text-zinc-500 text-sm italic">Confidencialidad garantizada bajo acuerdos de NDA.</p>
     </div>
   </section>
 
-  <footer class="py-10 text-center border-t border-zinc-900 text-zinc-600 text-xs">
-    <p>© 2026 MRA VANGUARD – Ciberseguridad & Ingeniería Crítica | Lima, Perú</p>
+  <footer class="py-12 text-center text-zinc-700 text-xs border-t border-zinc-900">
+    <p>© 2026 MRA VANGUARD – Ingeniería & Ciberseguridad | Lima, Perú</p>
   </footer>
 
-  <a href="https://wa.me/51999999999?text=Hola%2C%20necesito%20una%20consultoría%20con%20MRA%20Vanguard" 
-     class="fixed bottom-8 right-8 bg-[#25D366] w-14 h-14 rounded-2xl flex items-center justify-center text-3xl shadow-2xl hover:scale-110 transition-all z-50">
+  <a href="https://wa.me/51999999999?text=Hola%2C%20necesito%20una%20consultoría%20técnica%20con%20MRA%20Vanguard" 
+     target="_blank"
+     class="fixed bottom-8 right-8 bg-[#25D366] w-16 h-16 rounded-2xl flex items-center justify-center text-3xl shadow-2xl hover:scale-110 transition-all z-50">
     <i class="fa-brands fa-whatsapp text-white"></i>
   </a>
 
+  <script>
+    function analizarURL() {
+      const url = document.getElementById('urlInput').value;
+      const res = document.getElementById('demoResults');
+      if(!url) return alert("Ingrese una URL");
+
+      res.classList.remove('hidden');
+      res.innerHTML = `<p class="text-cyan-500 animate-pulse font-mono">Iniciando escaneo de seguridad en ${url}...</p>`;
+
+      setTimeout(() => {
+        res.innerHTML = `
+          <div class="demo-result bg-zinc-800 p-6 rounded-2xl border border-cyan-500/30">
+            <div class="flex justify-between mb-4">
+              <span class="font-bold text-cyan-400">Escaneo Preliminar Completado</span>
+              <span class="text-yellow-500 font-bold">Riesgo: Medio</span>
+            </div>
+            <ul class="text-sm text-zinc-400 space-y-2 mb-4">
+              <li><i class="fa-solid fa-triangle-exclamation text-yellow-500 mr-2"></i> Falta de encabezados HSTS/CSP.</li>
+              <li><i class="fa-solid fa-circle-check text-green-500 mr-2"></i> Certificado SSL válido.</li>
+              <li><i class="fa-solid fa-triangle-exclamation text-yellow-500 mr-2"></i> Puertos de administración expuestos.</li>
+            </ul>
+            <button onclick="document.getElementById('contacto').scrollIntoView()" class="w-full bg-cyan-500/10 border border-cyan-500 text-cyan-500 py-2 rounded-lg font-bold">Descargar Informe Completo</button>
+          </div>
+        `;
+      }, 2000);
+    }
+  </script>
 </body>
 </html>
