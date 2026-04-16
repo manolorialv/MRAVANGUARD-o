@@ -1,23 +1,15 @@
 // main.js - MRA VANGUARD
-function initTailwind() {
-    tailwind.config = {
-        content: [],
-        theme: {
-            extend: {}
-        }
-    }
-}
 
 function analizarURL() {
-    const input = document.getElementById('urlInput')
-    const resultado = document.getElementById('resultado')
+    const input = document.getElementById('urlInput');
+    const resultado = document.getElementById('resultado');
     
     if (!input || input.value.trim() === '') {
-        alert('Por favor ingresa una URL válida')
-        return
+        alert('Por favor ingresa una URL válida');
+        return;
     }
 
-    resultado.classList.remove('hidden')
+    resultado.classList.remove('hidden');
     resultado.innerHTML = `
         <div class="bg-[#0a1729] border border-cyan-400 rounded-2xl p-8 text-left max-w-md mx-auto">
             <div class="flex justify-between items-center mb-6">
@@ -34,22 +26,37 @@ function analizarURL() {
             <p class="text-xs text-gray-500 mt-8">Este es un análisis ilustrativo. El informe completo y personalizado lo entregamos en nuestra consultoría.</p>
             <button onclick="contactar()" class="mt-6 w-full bg-cyan-400 text-black py-3 rounded-2xl font-semibold">Obtener informe completo →</button>
         </div>
-    `
+    `;
 }
 
 function contactar() {
-    alert('¡Gracias! En breve te contactaremos por WhatsApp o correo para entregarte el informe completo.')
-    // Aquí podrías redirigir a WhatsApp o formulario
+    alert('Gracias. En breve te contactaremos para entregarte el informe completo.');
 }
 
 document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault()
-    alert('✅ Formulario enviado. Te contactaremos en menos de 2 horas vía WhatsApp o correo.')
-    this.reset()
-})
+    e.preventDefault();
+    alert('✅ Mensaje recibido correctamente.\n\nTe responderemos en las próximas horas vía correo o WhatsApp.');
+    this.reset();
+});
 
-// Inicializar
+// Cookies
+function mostrarBannerCookies() {
+    if (!localStorage.getItem('cookiesAceptadas')) {
+        document.getElementById('cookieBanner').classList.remove('hidden');
+    }
+}
+
+function aceptarCookies() {
+    localStorage.setItem('cookiesAceptadas', 'true');
+    document.getElementById('cookieBanner').classList.add('hidden');
+}
+
+function rechazarCookies() {
+    localStorage.setItem('cookiesAceptadas', 'true');
+    document.getElementById('cookieBanner').classList.add('hidden');
+}
+
 document.addEventListener('DOMContentLoaded', () => {
-    initTailwind()
-    console.log('%c🚀 MRA VANGUARD - Sitio profesional cargado', 'color:#22d3ee; font-weight:bold')
-})
+    mostrarBannerCookies();
+    console.log('%c🛡️ MRA VANGUARD - Sitio cargado correctamente', 'color:#22d3ee; font-weight:600');
+});
