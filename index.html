@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="MRA VANGUARD - Consultoría de Ciberseguridad estratégica en Perú. Especialistas en protección de sistemas legacy, pasarelas de pago y cumplimiento normativo.">
+    <meta name="description" content="MRA VANGUARD - Consultoría de ciberseguridad estratégica en Perú. Especialistas en sistemas legacy, pasarelas de pago (Niubiz, Culqi, Izipay) y cumplimiento normativo (Ley 29733, SBS, SMV).">
+    <meta name="keywords" content="ciberseguridad Perú, pentesting, zero trust, sistemas legacy, FoxPro, seguridad pasarelas pago, cumplimiento SBS">
     <title>MRA VANGUARD | Ciberseguridad Estratégica en Perú</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
@@ -12,33 +13,32 @@
     <style>
         body { font-family: 'Inter', system-ui, sans-serif; }
         .hero-bg { background: linear-gradient(135deg, #0a1729 0%, #112233 100%); }
-        .card-hover { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
-        .card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1); }
+        .card-hover { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        .card-hover:hover { transform: translateY(-10px); box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25); }
+        .nav-link { position: relative; }
+        .nav-link:after { content: ''; position: absolute; width: 0; height: 2px; bottom: -2px; left: 0; background-color: #22d3ee; transition: width 0.3s ease; }
+        .nav-link:hover:after { width: 100%; }
     </style>
 </head>
 <body class="bg-[#0a1729] text-white">
 
-    <!-- NAVBAR (igual que antes) -->
-    <nav class="bg-[#0a1729]/90 backdrop-blur-md border-b border-cyan-500/20 fixed w-full z-50">
+    <!-- NAVBAR -->
+    <nav class="bg-[#0a1729]/95 backdrop-blur-md border-b border-cyan-500/20 fixed w-full z-50">
         <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
             <div class="flex items-center gap-3">
                 <span class="text-3xl">🛡️</span>
                 <h1 class="text-2xl font-bold tracking-tight">MRA VANGUARD</h1>
             </div>
             <div class="hidden md:flex items-center gap-8 text-sm font-medium">
-                <a href="#servicios" class="hover:text-cyan-400 transition">Servicios</a>
-                <a href="#por-que-nosotros" class="hover:text-cyan-400 transition">¿Por qué nosotros?</a>
-                <a href="#proceso" class="hover:text-cyan-400 transition">Proceso</a>
-                <a href="#recursos" class="hover:text-cyan-400 transition">Recursos</a>
-                <a href="#contacto" class="hover:text-cyan-400 transition">Contacto</a>
+                <a href="#servicios" class="nav-link hover:text-cyan-400 transition">Servicios</a>
+                <a href="#por-que-nosotros" class="nav-link hover:text-cyan-400 transition">¿Por qué nosotros?</a>
+                <a href="#proceso" class="nav-link hover:text-cyan-400 transition">Proceso</a>
+                <a href="#recursos" class="nav-link hover:text-cyan-400 transition">Recursos</a>
+                <a href="#contacto" class="nav-link hover:text-cyan-400 transition">Contacto</a>
             </div>
             <div class="flex items-center gap-4">
-                <button onclick="analizarURL()" 
-                        class="bg-cyan-500 hover:bg-cyan-400 text-black font-semibold px-6 py-2.5 rounded-xl transition text-sm">
-                    Analizar URL Gratis
-                </button>
-                <a href="https://wa.me/51999999999" target="_blank"
-                   class="flex items-center gap-2 bg-green-500 hover:bg-green-400 text-black font-semibold px-5 py-2.5 rounded-xl transition text-sm">
+                <button onclick="analizarURL()" class="bg-cyan-500 hover:bg-cyan-400 text-black font-semibold px-6 py-2.5 rounded-2xl transition text-sm">Analizar URL Gratis</button>
+                <a href="https://wa.me/51999999999" target="_blank" class="flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-medium px-5 py-2.5 rounded-2xl transition text-sm">
                     <i class="fab fa-whatsapp"></i> WhatsApp
                 </a>
             </div>
@@ -46,19 +46,19 @@
     </nav>
 
     <!-- HERO -->
-    <header class="hero-bg pt-24 pb-20">
+    <header class="hero-bg pt-24 pb-24">
         <div class="max-w-7xl mx-auto px-6 text-center">
             <div class="inline-flex items-center gap-2 bg-white/10 text-cyan-300 text-sm font-medium px-6 py-2 rounded-3xl mb-6">
                 🇵🇪 Consultoría peruana • Especialistas en sistemas críticos
             </div>
             <h1 class="text-5xl md:text-6xl font-bold leading-tight max-w-4xl mx-auto">
-                Ciberseguridad estratégica<br>para empresas que no pueden parar
+                Protegemos lo que realmente mueve tu negocio
             </h1>
             <p class="mt-6 text-xl text-gray-300 max-w-2xl mx-auto">
-                Protegemos sistemas legacy (FoxPro, Oracle, COBOL), pasarelas de pago peruanas y cumplimos con normativas locales sin interrumpir tus operaciones.
+                Ciberseguridad estratégica para sistemas legacy, pasarelas de pago peruanas y cumplimiento normativo. Soluciones prácticas sin interrupciones.
             </p>
-            <div class="mt-10 flex flex-wrap justify-center gap-4">
-                <button onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'})"
+            <div class="mt-12 flex flex-wrap justify-center gap-4">
+                <button onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'})" 
                         class="bg-white text-black font-semibold px-10 py-4 rounded-2xl text-lg hover:scale-105 transition">
                     Solicitar diagnóstico confidencial
                 </button>
@@ -74,132 +74,143 @@
     <section id="por-que-nosotros" class="py-20 bg-[#112233]">
         <div class="max-w-7xl mx-auto px-6">
             <h2 class="text-center text-4xl font-semibold mb-4">¿Por qué elegir MRA VANGUARD?</h2>
-            <p class="text-center text-gray-400 mb-12">Una consultoría nueva, pero con enfoque muy claro y práctico</p>
+            <p class="text-center text-gray-400 mb-12 max-w-2xl mx-auto">Una consultoría nueva con enfoque claro, práctico y adaptado a la realidad empresarial peruana.</p>
             
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="bg-[#0a1729] p-8 rounded-3xl card-hover">
                     <div class="text-4xl mb-4">🇵🇪</div>
-                    <h3 class="text-xl font-semibold mb-3">Conocimiento profundo del mercado peruano</h3>
-                    <p class="text-gray-400">Entendemos la realidad de las empresas locales: normativas SBS, SMV, Ley 29733 y los desafíos de sistemas legacy aún muy usados en Perú.</p>
+                    <h3 class="text-xl font-semibold mb-3">Conocimiento local profundo</h3>
+                    <p class="text-gray-400">Entendemos la Ley 29733, regulaciones SBS y SMV, y los desafíos reales de sistemas legacy en empresas peruanas.</p>
                 </div>
                 <div class="bg-[#0a1729] p-8 rounded-3xl card-hover">
                     <div class="text-4xl mb-4">🔧</div>
-                    <h3 class="text-xl font-semibold mb-3">Especialistas en sistemas legacy + modernos</h3>
-                    <p class="text-gray-400">Modernizamos y protegemos FoxPro, Visual Basic, Oracle y mainframes sin downtime, integrándolos de forma segura con pasarelas como Niubiz, Culqi e Izipay.</p>
+                    <h3 class="text-xl font-semibold mb-3">Especialistas en legacy + modernos</h3>
+                    <p class="text-gray-400">Modernizamos y protegemos FoxPro, Oracle, COBOL y mainframes integrándolos de forma segura con pasarelas como Niubiz, Culqi e Izipay.</p>
                 </div>
                 <div class="bg-[#0a1729] p-8 rounded-3xl card-hover">
                     <div class="text-4xl mb-4">⚡</div>
-                    <h3 class="text-xl font-semibold mb-3">Enfoque práctico y sin interrupciones</h3>
-                    <p class="text-gray-400">Diseñamos soluciones que no paralizan tu operación. Resultados rápidos y medibles, con énfasis en continuidad del negocio.</p>
+                    <h3 class="text-xl font-semibold mb-3">Sin interrupciones</h3>
+                    <p class="text-gray-400">Diseñamos soluciones con enfoque Zero Downtime, priorizando la continuidad del negocio.</p>
                 </div>
                 <div class="bg-[#0a1729] p-8 rounded-3xl card-hover">
                     <div class="text-4xl mb-4">📜</div>
-                    <h3 class="text-xl font-semibold mb-3">Cumplimiento normativo real</h3>
-                    <p class="text-gray-400">Preparamos tu empresa para auditorías regulatorias con un enfoque técnico-legal claro y accionable.</p>
+                    <h3 class="text-xl font-semibold mb-3">Cumplimiento normativo accionable</h3>
+                    <p class="text-gray-400">Preparamos tu empresa para auditorías con un enfoque técnico-legal claro y práctico.</p>
                 </div>
                 <div class="bg-[#0a1729] p-8 rounded-3xl card-hover">
                     <div class="text-4xl mb-4">🛠️</div>
                     <h3 class="text-xl font-semibold mb-3">Equipo certificado</h3>
-                    <p class="text-gray-400">Profesionales con certificaciones internacionales (CISSP, OSCP, CISM, ISO 27001) y experiencia real en entornos críticos.</p>
+                    <p class="text-gray-400">Profesionales con certificaciones internacionales y experiencia en entornos críticos.</p>
                 </div>
                 <div class="bg-[#0a1729] p-8 rounded-3xl card-hover">
                     <div class="text-4xl mb-4">📈</div>
                     <h3 class="text-xl font-semibold mb-3">Transferencia de conocimiento</h3>
-                    <p class="text-gray-400">No solo resolvemos problemas: capacitamos a tu equipo para que ganes autonomía en ciberseguridad.</p>
+                    <p class="text-gray-400">Capacitamos a tu equipo para que ganes autonomía en ciberseguridad a largo plazo.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SERVICIOS (mismo que antes, sin cambios mayores) -->
+    <!-- SERVICIOS -->
     <section id="servicios" class="py-20">
         <div class="max-w-7xl mx-auto px-6">
             <h2 class="text-center text-4xl font-semibold mb-4">Nuestros Servicios</h2>
-            <p class="text-center text-gray-400 mb-12">Soluciones enfocadas en tu realidad empresarial en Perú</p>
+            <p class="text-center text-gray-400 mb-12">Soluciones concretas adaptadas a tu realidad en Perú</p>
             
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Service 1 -->
                 <div class="bg-[#112233] p-8 rounded-3xl card-hover">
                     <div class="text-4xl mb-6">🔥</div>
                     <h3 class="text-2xl font-semibold mb-2">Resilience Engine</h3>
-                    <p class="text-gray-400 mb-6">Ciclo cerrado de Inteligencia Ofensiva (Pentesting) y Remediación inmediata bajo estándares NIST.</p>
+                    <p class="text-gray-400 mb-6">Pentesting, Red Teaming y remediación bajo estándares NIST y Zero Trust.</p>
                     <ul class="space-y-3 text-sm">
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-400"></i> Offensive Strike & Red Teaming</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-400"></i> Hardening de Infraestructura</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-400"></i> Offensive Security</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-400"></i> Hardening de infraestructura</li>
                         <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-400"></i> Arquitecturas Zero Trust</li>
                     </ul>
                 </div>
 
-                <!-- Service 2 -->
                 <div class="bg-[#112233] p-8 rounded-3xl card-hover">
                     <div class="text-4xl mb-6">💰</div>
                     <h3 class="text-2xl font-semibold mb-2">Revenue Sentinel</h3>
-                    <p class="text-gray-400 mb-6">Vigilancia 24/7 de pasarelas de pago (Niubiz, Culqi, Izipay) para evitar pérdida de ingresos.</p>
+                    <p class="text-gray-400 mb-6">Protección 24/7 de pasarelas de pago para evitar pérdida de ingresos.</p>
                     <ul class="space-y-3 text-sm">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-400"></i> Monitoreo Niubiz, Culqi, Izipay</li>
                         <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-400"></i> Alertas críticas vía WhatsApp</li>
                         <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-400"></i> Integridad Core-Pasarela</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-400"></i> Monitoreo de Continuidad</li>
                     </ul>
                 </div>
 
-                <!-- Service 3 -->
                 <div class="bg-[#112233] p-8 rounded-3xl card-hover">
                     <div class="text-4xl mb-6">🔄</div>
-                    <h3 class="text-2xl font-semibold mb-2">Modernización Segura de Legacy</h3>
-                    <p class="text-gray-400 mb-6">Conectamos FoxPro, SQL, Oracle y mainframes con la nube sin interrupciones.</p>
+                    <h3 class="text-2xl font-semibold mb-2">Modernización Segura Legacy</h3>
+                    <p class="text-gray-400 mb-6">Migración y protección de FoxPro, Oracle y sistemas tradicionales sin downtime.</p>
                     <ul class="space-y-3 text-sm">
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-400"></i> Modernización Zero Downtime</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-400"></i> Executive KPIs Móviles</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-400"></i> Interoperabilidad Estratégica</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-400"></i> Zero Downtime</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-400"></i> Integración segura con nube</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-400"></i> KPIs ejecutivos en tiempo real</li>
                     </ul>
                 </div>
 
-                <!-- Service 4 -->
                 <div class="bg-[#112233] p-8 rounded-3xl card-hover">
                     <div class="text-4xl mb-6">📋</div>
                     <h3 class="text-2xl font-semibold mb-2">Gobierno, Riesgo y Cumplimiento (GRC)</h3>
                     <p class="text-gray-400 mb-6">Adecuación a Ley 29733, SBS y SMV con enfoque técnico-legal.</p>
                     <ul class="space-y-3 text-sm">
                         <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-400"></i> Preparación ISO 27001</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-400"></i> Gobernanza de Riesgos</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-400"></i> Auditorías Regulatorias</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-400"></i> Gestión de riesgos</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-400"></i> Auditorías regulatorias</li>
                     </ul>
                 </div>
 
-                <!-- Service 5 -->
                 <div class="bg-[#112233] p-8 rounded-3xl card-hover">
                     <div class="text-4xl mb-6">👥</div>
                     <h3 class="text-2xl font-semibold mb-2">Cyber Culture</h3>
-                    <p class="text-gray-400 mb-6">Fortalecemos el factor humano y técnico.</p>
+                    <p class="text-gray-400 mb-6">Fortalecimiento del factor humano y técnico.</p>
                     <ul class="space-y-3 text-sm">
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-400"></i> Simulacros de Phishing</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-400"></i> Talleres DevSecOps & QA</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-400"></i> Asesoría Ejecutiva en Crisis</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-400"></i> Simulacros de phishing</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-400"></i> Talleres DevSecOps</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-400"></i> Asesoría en gestión de crisis</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PROCESO (igual) -->
+    <!-- PROCESO -->
     <section id="proceso" class="py-20 bg-[#112233]">
         <div class="max-w-7xl mx-auto px-6">
             <h2 class="text-center text-4xl font-semibold mb-12">Nuestro Proceso</h2>
             <div class="grid md:grid-cols-4 gap-8">
-                <div class="text-center"><div class="w-12 h-12 mx-auto bg-cyan-500 text-black rounded-2xl flex items-center justify-center font-bold text-xl mb-4">1</div><p class="font-semibold">Diagnóstico Inicial</p><p class="text-sm text-gray-400 mt-2">Análisis confidencial de tu infraestructura crítica</p></div>
-                <div class="text-center"><div class="w-12 h-12 mx-auto bg-cyan-500 text-black rounded-2xl flex items-center justify-center font-bold text-xl mb-4">2</div><p class="font-semibold">Plan de Blindaje</p><p class="text-sm text-gray-400 mt-2">Estrategia personalizada + roadmap</p></div>
-                <div class="text-center"><div class="w-12 h-12 mx-auto bg-cyan-500 text-black rounded-2xl flex items-center justify-center font-bold text-xl mb-4">3</div><p class="font-semibold">Ejecución</p><p class="text-sm text-gray-400 mt-2">Implementación sin interrupciones</p></div>
-                <div class="text-center"><div class="w-12 h-12 mx-auto bg-cyan-500 text-black rounded-2xl flex items-center justify-center font-bold text-xl mb-4">4</div><p class="font-semibold">Monitoreo y Soporte</p><p class="text-sm text-gray-400 mt-2">Seguimiento continuo + capacitación</p></div>
+                <div class="text-center">
+                    <div class="w-12 h-12 mx-auto bg-cyan-500 text-black rounded-2xl flex items-center justify-center font-bold text-xl mb-4">1</div>
+                    <p class="font-semibold">Diagnóstico Inicial</p>
+                    <p class="text-sm text-gray-400 mt-2">Análisis confidencial de tu infraestructura crítica</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-12 h-12 mx-auto bg-cyan-500 text-black rounded-2xl flex items-center justify-center font-bold text-xl mb-4">2</div>
+                    <p class="font-semibold">Plan de Blindaje</p>
+                    <p class="text-sm text-gray-400 mt-2">Estrategia personalizada y roadmap</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-12 h-12 mx-auto bg-cyan-500 text-black rounded-2xl flex items-center justify-center font-bold text-xl mb-4">3</div>
+                    <p class="font-semibold">Ejecución</p>
+                    <p class="text-sm text-gray-400 mt-2">Implementación sin interrupciones</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-12 h-12 mx-auto bg-cyan-500 text-black rounded-2xl flex items-center justify-center font-bold text-xl mb-4">4</div>
+                    <p class="font-semibold">Monitoreo y Soporte</p>
+                    <p class="text-sm text-gray-400 mt-2">Seguimiento continuo + capacitación</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- ANALIZADOR GRATIS (igual) -->
+    <!-- ANALIZADOR GRATIS -->
     <section class="py-20">
         <div class="max-w-2xl mx-auto px-6">
             <div class="bg-[#112233] rounded-3xl p-10 text-center">
                 <h2 class="text-3xl font-semibold mb-3">Prueba Gratis tu URL</h2>
-                <p class="text-gray-400 mb-8">Ingresa tu sitio o aplicación y recibe un análisis rápido de seguridad y usabilidad</p>
+                <p class="text-gray-400 mb-8">Ingresa tu sitio o aplicación y recibe un análisis rápido de seguridad</p>
                 <div class="flex gap-3 max-w-md mx-auto">
                     <input id="urlInput" type="text" placeholder="https://tudominio.com" 
                            class="flex-1 bg-white/10 border border-white/20 rounded-2xl px-6 py-4 focus:outline-none focus:border-cyan-400 text-white placeholder:text-gray-500">
@@ -211,101 +222,126 @@
         </div>
     </section>
 
-    <!-- NUESTRO EQUIPO -->
-    <section class="py-20">
+    <!-- EQUIPO -->
+    <section class="py-20 bg-[#112233]">
         <div class="max-w-7xl mx-auto px-6">
             <h2 class="text-center text-4xl font-semibold mb-12">Nuestro Equipo</h2>
             <p class="text-center text-gray-400 max-w-2xl mx-auto mb-12">
-                Somos un equipo reducido pero altamente especializado, con experiencia combinada en ciberseguridad ofensiva, cumplimiento normativo y modernización de sistemas legacy en el sector empresarial peruano.
+                Equipo reducido pero altamente especializado en ciberseguridad ofensiva, cumplimiento normativo y modernización segura de sistemas en el mercado peruano.
             </p>
             <div class="grid md:grid-cols-3 gap-8 text-center">
-                <div class="bg-[#112233] p-8 rounded-3xl">
+                <div class="bg-[#0a1729] p-8 rounded-3xl">
                     <div class="w-20 h-20 mx-auto bg-cyan-500/20 rounded-2xl flex items-center justify-center text-4xl mb-4">👨‍💼</div>
                     <h3 class="font-semibold">Fundador & Lead Consultant</h3>
                     <p class="text-sm text-gray-400 mt-2">Más de 12 años en seguridad de infraestructuras críticas y pasarelas de pago.</p>
                 </div>
-                <div class="bg-[#112233] p-8 rounded-3xl">
+                <div class="bg-[#0a1729] p-8 rounded-3xl">
                     <div class="w-20 h-20 mx-auto bg-cyan-500/20 rounded-2xl flex items-center justify-center text-4xl mb-4">🛡️</div>
                     <h3 class="font-semibold">Especialista en Pentesting & Zero Trust</h3>
-                    <p class="text-sm text-gray-400 mt-2">Certificado OSCP y experiencia en Red Teaming para entornos financieros.</p>
+                    <p class="text-sm text-gray-400 mt-2">Certificado OSCP con experiencia en Red Teaming para entornos financieros.</p>
                 </div>
-                <div class="bg-[#112233] p-8 rounded-3xl">
+                <div class="bg-[#0a1729] p-8 rounded-3xl">
                     <div class="w-20 h-20 mx-auto bg-cyan-500/20 rounded-2xl flex items-center justify-center text-4xl mb-4">📋</div>
                     <h3 class="font-semibold">Experto en GRC y Normativa</h3>
                     <p class="text-sm text-gray-400 mt-2">Especialista en Ley de Protección de Datos y regulaciones SBS/SMV.</p>
                 </div>
             </div>
-            <p class="text-center text-xs text-gray-500 mt-10">Estamos creciendo. Si eres un profesional certificado y quieres unirte, contáctanos.</p>
         </div>
     </section>
 
-    <!-- RECURSOS / BLOG -->
-    <section id="recursos" class="py-20 bg-[#112233]">
+    <!-- RECURSOS -->
+    <section id="recursos" class="py-20">
         <div class="max-w-7xl mx-auto px-6">
             <h2 class="text-center text-4xl font-semibold mb-12">Recursos y Conocimiento</h2>
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-[#0a1729] p-8 rounded-3xl card-hover">
-                    <h3 class="font-semibold mb-3">Riesgos reales de sistemas Visual FoxPro en el Perú 2026</h3>
+                <div class="bg-[#112233] p-8 rounded-3xl card-hover">
+                    <h3 class="font-semibold mb-3">Riesgos reales de sistemas Visual FoxPro en Perú 2026</h3>
                     <p class="text-sm text-gray-400">Por qué siguen siendo un objetivo atractivo y cómo protegerlos sin migrar inmediatamente.</p>
-                    <a href="#" class="text-cyan-400 text-sm mt-6 inline-block">Leer artículo →</a>
+                    <a href="#" class="text-cyan-400 text-sm mt-6 inline-block">Leer más →</a>
                 </div>
-                <div class="bg-[#0a1729] p-8 rounded-3xl card-hover">
+                <div class="bg-[#112233] p-8 rounded-3xl card-hover">
                     <h3 class="font-semibold mb-3">Cómo preparar tu empresa para las exigencias SBS 2026</h3>
                     <p class="text-sm text-gray-400">Guía práctica con enfoque en sistemas legacy y pasarelas de pago.</p>
-                    <a href="#" class="text-cyan-400 text-sm mt-6 inline-block">Leer artículo →</a>
+                    <a href="#" class="text-cyan-400 text-sm mt-6 inline-block">Leer más →</a>
                 </div>
-                <div class="bg-[#0a1729] p-8 rounded-3xl card-hover">
+                <div class="bg-[#112233] p-8 rounded-3xl card-hover">
                     <h3 class="font-semibold mb-3">Zero Trust aplicado a entornos tradicionales</h3>
                     <p class="text-sm text-gray-400">Implementación realista en empresas peruanas con infraestructura mixta.</p>
-                    <a href="#" class="text-cyan-400 text-sm mt-6 inline-block">Leer artículo →</a>
+                    <a href="#" class="text-cyan-400 text-sm mt-6 inline-block">Leer más →</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- FAQ -->
-    <section class="py-20">
+    <section class="py-20 bg-[#112233]">
         <div class="max-w-3xl mx-auto px-6">
             <h2 class="text-center text-4xl font-semibold mb-12">Preguntas Frecuentes</h2>
             <div class="space-y-8">
                 <div>
                     <h3 class="font-semibold text-lg">¿Cuánto tiempo toma un diagnóstico inicial?</h3>
-                    <p class="text-gray-400 mt-2">Normalmente entre 48 y 72 horas para entregar un reporte ejecutivo claro.</p>
+                    <p class="text-gray-400 mt-2">Entre 48 y 72 horas para entregar un reporte ejecutivo claro y accionable.</p>
                 </div>
                 <div>
-                    <h3 class="font-semibold text-lg">¿Trabajan con empresas pequeñas o solo grandes?</h3>
-                    <p class="text-gray-400 mt-2">Trabajamos con medianas y grandes empresas que tienen sistemas críticos o procesan pagos electrónicos.</p>
+                    <h3 class="font-semibold text-lg">¿Trabajan solo con empresas grandes?</h3>
+                    <p class="text-gray-400 mt-2">Trabajamos principalmente con medianas y grandes empresas que tienen sistemas críticos o procesan pagos electrónicos.</p>
                 </div>
                 <div>
-                    <h3 class="font-semibold text-lg">¿Pueden modernizar nuestros sistemas sin parar la operación?</h3>
-                    <p class="text-gray-400 mt-2">Sí. Nuestro enfoque es Zero Downtime siempre que sea técnicamente posible.</p>
+                    <h3 class="font-semibold text-lg">¿Pueden modernizar sin parar la operación?</h3>
+                    <p class="text-gray-400 mt-2">Sí. Nuestro enfoque prioriza Zero Downtime siempre que sea técnicamente viable.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CONTACTO (igual) -->
-    <section id="contacto" class="py-20 bg-[#112233]">
+    <!-- CONTACTO -->
+    <section id="contacto" class="py-20">
         <div class="max-w-2xl mx-auto px-6 text-center">
             <h2 class="text-4xl font-semibold mb-6">Inicia tu diagnóstico confidencial</h2>
+            <p class="text-gray-400 mb-8">Tus datos están protegidos conforme a la Ley N° 29733 de Protección de Datos Personales.</p>
+            
             <form id="contactForm" class="space-y-6">
-                <input type="text" placeholder="Nombre de tu empresa" class="w-full bg-white/10 border border-white/20 rounded-2xl px-6 py-4 text-white">
-                <input type="email" placeholder="Correo corporativo" class="w-full bg-white/10 border border-white/20 rounded-2xl px-6 py-4 text-white">
-                <textarea placeholder="Cuéntanos brevemente tu necesidad" rows="4" class="w-full bg-white/10 border border-white/20 rounded-2xl px-6 py-4 text-white"></textarea>
-                <button type="submit" 
-                        class="w-full bg-cyan-500 text-black font-semibold py-5 rounded-3xl text-lg hover:bg-cyan-400 transition">Enviar y hablar con un experto</button>
+                <input type="text" id="empresa" placeholder="Nombre de tu empresa" required class="w-full bg-white/10 border border-white/20 rounded-2xl px-6 py-4 text-white placeholder:text-gray-500 focus:border-cyan-400 focus:outline-none">
+                <input type="email" id="email" placeholder="Correo corporativo" required class="w-full bg-white/10 border border-white/20 rounded-2xl px-6 py-4 text-white placeholder:text-gray-500 focus:border-cyan-400 focus:outline-none">
+                <textarea id="mensaje" placeholder="Cuéntanos brevemente tu necesidad o desafío actual" rows="4" required class="w-full bg-white/10 border border-white/20 rounded-2xl px-6 py-4 text-white placeholder:text-gray-500 focus:border-cyan-400 focus:outline-none"></textarea>
+                <button type="submit" class="w-full bg-cyan-500 hover:bg-cyan-400 text-black font-semibold py-5 rounded-3xl text-lg transition">Enviar mensaje seguro</button>
             </form>
-            <p class="mt-8 text-sm text-gray-400">O escríbenos directamente por 
-                <a href="https://wa.me/51999999999" class="text-green-400 underline">WhatsApp</a>
+            
+            <p class="mt-8 text-xs text-gray-500">
+                Al enviar aceptas nuestra <a href="politica-privacidad.html" target="_blank" class="text-cyan-400 hover:underline">Política de Privacidad</a>.
             </p>
         </div>
     </section>
+
+    <!-- BANNER COOKIES -->
+    <div id="cookieBanner" class="fixed bottom-0 left-0 right-0 bg-[#112233] border-t border-cyan-500/30 p-4 hidden z-50">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
+            <p class="text-gray-300">
+                Este sitio usa cookies esenciales para su funcionamiento y cookies analíticas para mejorar la experiencia. 
+                <a href="politica-cookies.html" target="_blank" class="text-cyan-400 underline">Ver política de cookies</a>.
+            </p>
+            <div class="flex gap-3">
+                <button onclick="aceptarCookies()" class="bg-cyan-500 text-black px-6 py-2 rounded-2xl font-medium text-sm">Aceptar todas</button>
+                <button onclick="rechazarCookies()" class="border border-white/40 px-6 py-2 rounded-2xl text-sm">Solo esenciales</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- BOTÓN FLOTANTE WHATSAPP -->
+    <a href="https://wa.me/51999999999" target="_blank" 
+       class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-xl z-50 transition">
+        <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
 
     <!-- FOOTER -->
     <footer class="bg-black py-16 border-t border-white/10">
         <div class="max-w-7xl mx-auto px-6 text-center text-sm text-gray-400">
             <p>© 2026 MRA VANGUARD • Consultoría de Ciberseguridad en Perú</p>
-            <p class="mt-2">Todos los derechos reservados • <a href="#" class="hover:text-white">Política de Privacidad</a></p>
+            <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 mt-4">
+                <a href="politica-privacidad.html" target="_blank" class="hover:text-white transition">Política de Privacidad</a>
+                <a href="politica-cookies.html" target="_blank" class="hover:text-white transition">Política de Cookies</a>
+            </div>
+            <p class="mt-6 text-xs">Todos los derechos reservados</p>
         </div>
     </footer>
 
